@@ -1,0 +1,128 @@
+    body {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        }
+
+    /*.폰트*/
+        .logo{}
+        .prBanner{
+            display:flex;
+            align-items: center;
+            position:absolute;
+            top:70px;
+            width:100%;
+            height:940px;
+            font-size: 3.75rem;
+            text-align: center;
+        
+            color:white;
+        }
+        .prTitle{
+            font-size:3rem;
+            color:#0E7159;
+            font-weight: 700;
+            letter-spacing: -1.8px
+        }
+        .price{
+            font-size:2rem;
+            color:#0E7159;
+            font-weight: 700;
+        }
+        .title{
+            font-size:1.32rem;
+            color:#333D4B;
+            font-weight: 700;
+        }
+        .link{
+            font-size: 1.125rem;
+            color:#0E7159;
+            font-weight: 700;
+            letter-spacing: -0.6734192371368408px;
+        }
+        .tag{
+            font-size: 1.5rem;
+            color:#0E7159;
+            font-weight: 700;
+            letter-spacing: -0.8978922963142395px;
+        }
+        .desc{
+            font-size:1rem;
+            color:#6B7684;
+            font-weight: 500;
+            letter-spacing: -0.5985948443412781px;
+        }
+
+        .bannerDesc{
+            font-size: 14px;
+            color:#6B7684;
+            font-weight: 500;
+            letter-spacing: -0.5237705111503601px;
+        }
+
+        /*.레이아웃*/
+        .page{
+            width:1920px;
+            height:940px;
+            margin:auto;
+            margin-bottom:70px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .contents{
+            width:974px;
+            height:940px;
+            margin:auto;
+        }
+        .globalBanner{
+            height:70px;
+            width:100%;
+        }
+        
+        .card{
+            height: 390px;
+            width: 293px;
+        }
+        .cardImg{
+            height:233px;
+            width:293px;
+        }
+        .cardDesc{
+            height: 141px;
+            width: 293px;
+        }
+        .protoDesc{
+            height:727px;
+            width:451px;
+        }
+        .chat{
+            height: 105px;
+            width: 451px;
+        }
+        .userComment{
+            height: 360px;
+            width: 680px;
+        }
+        .button{
+            height: 30px;
+            width: 90px;
+            color:#0E7159;
+            border-radius: 4px;
+        }
+
+
+
+        .page.home{
+            background-image: url(https://github.com/udemy-team13/training/blob/main/gonasooc/assets/images/img/bg_main_section.png?raw=true);
+            filter:brightness(0.3);
+        }
+
+        .home ul{
+            list-style: none;        
+        }
+         li{
+            float:left;
+        }
+
+        .intro2 ul{
+            list-style: none;
+        }
+
