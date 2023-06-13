@@ -784,26 +784,13 @@ html.ie .scroll-custom {
 }
 
 /* ========== END icon 관련 스타일 ========== */
-/* =================== layout =================== */
+/* =================== common =================== */
 #app {
   min-height: 100%;
 }
 
 #page {
   min-height: 100%;
-}
-
-.l-center {
-  max-width: 1080px;
-  width: 95%;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-.panel {
-  max-width: 915px;
-  width: 100%;
-  margin: 0 auto;
 }
 
 /* =================== header =================== */
@@ -844,4 +831,24 @@ html.ie .scroll-custom {
   }
 }
 
-/* =================== main =================== */
+/* =================== safehomes-landing-page =================== */
+.safehomes-landing-page .l-center {
+  max-width: 1080px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.safehomes-header .header-inner {
+  max-width: 1110px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.safehomes-footer .footer-inner {
+  max-width: 1140px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
