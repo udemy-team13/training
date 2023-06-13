@@ -1,0 +1,85 @@
+/* =================== base =================== */
+html,
+body,
+[class] {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.15;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  font-family: "helvatica", "noto", "spoqa", sans-serif;
+  letter-spacing: -0.04em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* HTML5 display-role reset for older browsers */
+// article,
+// aside,
+// details,
+// figcaption,
+// figure,
+// footer,
+// header,
+// hgroup,
+// menu,
+// nav,
+// section {
+//   display: block;
+// }
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+a {
+  outline: 0;
+  background-color: transparent;
+
+  text: {
+    decoration: none;
+  }
+
+  color: color(text);
+  cursor: pointer;
+}
+
+ol,
+ul,
+dl {
+  list-style: none;
+}
+
+textarea {
+  resize: none;
+}
+
+select {
+  padding: 5px 10px;
+}
+
+/* ie 화살표 제거 */
+select::-ms-expand {
+  display: none;
+}
+
+address {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset img */
+img {
+  max-width: 100%;
+  height: auto;
+}

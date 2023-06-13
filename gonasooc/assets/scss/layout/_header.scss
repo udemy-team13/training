@@ -1,0 +1,17 @@
+/* =================== header =================== */
+.default-header {
+  width: 100%;
+  background-color: #fff;
+}
+
+.header-inner {
+  max-width: 1200px;
+  height: 90px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include mobile {
+    max-width: 100%;
+    height: 48px;
+  }
+}

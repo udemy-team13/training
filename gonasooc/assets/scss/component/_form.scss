@@ -1,0 +1,43 @@
+/* =================== form =================== */
+.input-wrap {
+  width: 100%;
+}
+
+.input {
+  @include input-reset;
+
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0 17px;
+  border-radius: 6px;
+  background-color: white;
+  font-size: em(18);
+  border: 1px solid;
+
+  @include hover {
+    border-color: color(primary);
+  }
+
+  &::placeholder {
+    opacity: 0.7;
+  }
+
+  &.input-tarea {
+    width: 100%;
+    height: 500px;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 6px;
+    resize: none;
+  }
+
+  &.input-round {
+    border: 1px solid;
+    border-radius: 25px;
+  }
+
+  &.input-underbar {
+    border-bottom: 1px solid;
+  }
+}
