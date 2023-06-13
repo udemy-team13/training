@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,87 @@
       License: none (public domain)
     */
 
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed, 
-    figure, figcaption, footer, header, hgroup, 
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
       margin: 0;
       padding: 0;
       border: 0;
@@ -31,36 +100,124 @@
       vertical-align: baseline;
       line-height: 1.5;
     }
+
     /* HTML5 display-role reset for older browsers */
-    article, aside, details, figcaption, figure, 
-    footer, header, hgroup, menu, nav, section {
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
       display: block;
     }
+
     body {
       line-height: 1;
     }
-    ol, ul {
+
+    ol,
+    ul {
       list-style: none;
     }
-    blockquote, q {
+
+    blockquote,
+    q {
       quotes: none;
     }
-    blockquote:before, blockquote:after,
-    q:before, q:after {
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
       content: '';
       content: none;
     }
+
     table {
       border-collapse: collapse;
       border-spacing: 0;
     }
+
+    article {
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
   </style>
 </head>
+
 <body>
-  <!-- <table>
-    <thead>
-      <tr></tr>
-    </thead>
-  </table> -->
+  <article>
+    <h3 class="title">하루 일과</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>시각</th>
+          <th>하는 일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>09:00 ~ 09:30</td>
+          <td>아침식사</td>
+        </tr>
+        <tr>
+          <td>10:00 ~ 11:00</td>
+          <td>아침공부</td>
+        </tr>
+        <tr>
+          <td>11:00 ~ 18:00</td>
+          <td>낮잠</td>
+        </tr>
+        <tr>
+          <td>18:00 ~ 19:00</td>
+          <td>저녁식사</td>
+        </tr>
+        <tr>
+          <td>19:00 ~ </td>
+          <td>취침</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+  <article>
+    <h3 class="title">자주 방문하는 홈페이지</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>홈페이지명</th>
+          <th>url</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ZEP</td>
+          <td><a href="https://zep.us/play/2Q7ajm" target="_blank">https://zep.us/play/2Q7ajm</a></td>
+        </tr>
+        <tr>
+          <td>UDEMY</td>
+          <td><a href="https://www.udemy.com/" target="_blank">https://www.udemy.com/</a></td>
+        </tr>
+        <tr>
+          <td>GitHub</td>
+          <td><a href="https://github.com/" target="_blank">https://github.com/</a></td>
+        </tr>
+        <tr>
+          <td>SFAC</td>
+          <td><a href="https://sniperfactory.com/" target="_blank">https://sniperfactory.com/</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
 </body>
+
 </html>
