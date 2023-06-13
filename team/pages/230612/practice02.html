@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="Expires" content="3600" />
+  <meta http-equiv="Pragma" content="3600" />
+  <meta http-equiv="cache-control" content="max-age=3600" />
+  <title>실습2</title>
+  <meta name="title" content="타이틀" />
+  <meta name="author" content="회사" />
+  <!-- FIXME: 핵심 설명 한 문장 -->
+  <meta name="description" content="상세설명" />
+  <!-- FIXME: 관련 키워드 -->
+  <meta name="keywords" content="키워드" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="유알엘" />
+  <meta property="og:title" content="타이틀" />
+  <meta property="og:description" content="상세설명" />
+  <!-- ! FIXME: full size: 800*800 / content size: 600*315 -->
+  <meta property="og:image" content="./assets/images/favicon/og.png" />
+  <!-- Twitter -->
+  <meta property="twitter:url" content="유알엘" />
+  <meta property="twitter:title" content="타이틀" />
+  <meta property="twitter:description" content="상세설명" />
+  <!-- END Open Graph -->
+
+  <!-- 웹마스터 가이드: 대표 url -->
+  <link rel="canonical" href="유알엘" />
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="./assets/images/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/images/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="./assets/images/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/images/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="36x36" href="./assets/images/favicon/android-chrome-36x36.png" />
+  <link rel="apple-touch-icon" sizes="48x48" href="./assets/images/favicon/android-chrome-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/images/favicon/android-chrome-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="./assets/images/favicon/android-chrome-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/images/favicon/android-chrome-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="./assets/images/favicon/android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="./assets/images/favicon/android-chrome-256x256.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="./assets/images/favicon/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#1D1D1D" />
+  <!-- FIXME: 대표색으로 설정 -->
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- 
+        https://realfavicongenerator.net/
+        favicon package 다운로드, 루트 수정
+        assets체크해서 뽑기
+    -->
+  <!-- END favicon -->
+
+  <!-- css link -->
+  <link rel="stylesheet" href="../../assets/css/custom/reset.css" />
+  <link rel="stylesheet" href="../../assets/css/custom/font.css" />
+
+  <style>
+  /* common */
+  .header-inner,
+  .l-center,
+  .footer-inner {
+    max-width: 1080px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  .header {
+    padding: 30px 0;
+  }
+
+  .header-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .article {
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 20px 0;
+    text-decoration: underline;
+  }
+
+  .list {
+    margin-bottom: 20px;
+  }
+
+  .list-title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .list-dec {
+    font-size: 16px;
+  }
+
+  .depth2-grp {
+    padding-left: 10px;
+  }
+
+  .depth2-list {
+    margin-bottom: 10px;
+  }
+
+  .footer {
+    padding: 30px 0;
+  }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <!-- FIXME: page class 용도에 맞게 변경 -->
+    <div id="page" class="main-page">
+      <!-- header -->
+      <header class="header">
+        <div class="header-inner">
+          <h1 class="header-title">시맨틱 태그 관련 실습 2</h1>
+        </div>
+      </header>
+      <!-- END header -->
+      <!-- content -->
+      <main class="main">
+        <div class="l-center">
+          <article class="article">
+            <h3 class="section-title">웅진씽크빅 케이스 분석</h3>
+            <ul class="grp">
+              <li class="list"><span class="list-title">좋은사례</span>
+                <ul class="depth2-grp">
+                  <li class="depth2-list">skip Navigation이 구현되어 있음</li>
+                </ul>
+              </li>
+              <li class="list"><span class="list-title">개선 필요사항</span>
+                <ul class="depth2-grp">
+                  <li class="depth2-list">header 요소에 div 대신 header 태그 사용</li>
+                  <li class="depth2-list">footer 요소에 div 대신 footer 태그 사용</li>
+                  <li class="depth2-list">gnb 요소에 div 대신 nav 태그 사용</li>
+                  <li class="depth2-list">로고가 a 태그에 백그라운드로 구현되어 있어서 스크린리더가 판독할 수 없음</li>
+                  <li class="depth2-list">img 태그에 alt 누락사항 보완</li>
+                  <li class="depth2-list">가상요소에 background-image로 작업 시 이미지 스크린리더가 판독할 수 없음</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article class="article">
+            <h3 class="section-title">웅진IT 케이스 분석</h3>
+            <ul class="grp">
+              <li class="list"><span class="list-title">좋은사례</span>
+                <ul class="depth2-grp">
+                  <li class="depth2-list">전체적으로 header, body, footer 등 시맨틱 태그 잘 적용되어 있음</li>
+                </ul>
+              </li>
+              <li class="list"><span class="list-title">개선 필요사항</span>
+                <ul class="depth2-grp">
+                  <li class="depth2-list">로고가 a 태그에 백그라운드로 구현되어 있어서 스크린리더가 판독할 수 없음</li>
+                  <li class="depth2-list">gnb 요소에 div 대신 nav 태그 사용</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+
+          <article class="article">
+            <h3 class="section-title">시멘틱 태그의 장점</h3>
+            <ul class="grp">
+              <li class="list">
+                <span class="list-title">시각장애가 있는 사용자가 스크린 리더를 사용하여 페이지를 탐색할 때 도움이 된다.</span>
+              </li>
+              <li class="list">
+                <span class="list-title">시맨틱 태그를 사용한 코드 블록을 찾는 것은 끝없는 div(div > div > div ...)를 탐색하는 것보다 훨씬 쉽다.</span>
+              </li>
+              <li class="list">
+                <span class="list-title">W3C에 따르면 "시맨틱 웹을 사용하면 애플리케이션, 기업 및 커뮤니티에서 데이터를 공유하고 재사용할 수 있다"고 한다. (의미가 있는 요소는 개발자 모두에게 명확한 의미를 전달한다)</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="article">
+            <h3 class="section-title">시맨틱 태그를 정하는 팁, 유의사항</h3>
+            <ul class="grp">
+              <li class="list">
+                <span class="list-title">사용할 태그를 결정하기전 "채울 데이터를 가장 잘 설명하고 나타내는 요소는 무엇일지?" 먼저 자문해 본다.</span>
+              </li>
+              <li class="list">
+                <span class="list-title">사용할 HTML은 태그는 스타일 기반이 아닌 채워질 데이터를 기반으로 결정되어야 한다. (예를들어 블로그 글 제목 스타일이 p태그를 사용하는 단락과 같은 디자인이더라도, p가 아닌 h1을 사용해야한다.)</span>
+                <span class="list-dec">어떻게 보여야 하는지는 전적으로 CSS의 책임이다. (이부분 헷갈리지 말자!)</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </main>
+      <!-- END content -->
+      <!-- footer -->
+      <footer class="footer">
+        <div class="footer-inner">
+          <p class="copyright">Copyright 2023. TEAM13. all rights reserved.</p>
+        </div>
+      </footer>
+      <!-- END footer -->
+    </div>
+    <!-- END page -->
+  </div>
+</body>
+
+</html>
