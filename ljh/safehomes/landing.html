@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      header {
+        display: flex;
+        width: 1920px;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white;
+        padding: 1.5rem 0;
+        position: relative;
+        margin: 0 auto;
+      }
+
+      .inquiry-btn {
+        border: none;
+        background-color: white;
+        font-weight: 500;
+        font-size: 1.1rem;
+        margin-right: 1rem;
+      }
+
+      .start-btn {
+        border: none;
+        background-color: #0e7159;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        color: white;
+        width: 7rem;
+        height: 2rem;
+      }
+      /* header */
+
+      article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.527),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url("image/bg_main_section.png");
+        background-size: contain;
+        width: 1920px;
+        height: 768px;
+        margin-bottom: 5rem;
+      }
+
+      article h1 {
+        color: white;
+        margin: 0 0 0 0;
+        font-size: 3.75rem;
+      }
+
+      .article-btn {
+        color: white;
+        border: none;
+        background-color: transparent;
+        padding: 2rem 0;
+        font-size: 1.5rem;
+      }
+
+      .article-btn:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        width: 1920px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .main-firstSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8rem;
+      }
+
+      .main-image-wrapper {
+        display: flex;
+      }
+
+      .main-image-wrapper div {
+        margin: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main-firstSection img {
+        width: 300px;
+      }
+
+      .main-firstSection-btn {
+        border: none;
+        width: 15rem;
+        color: #0e7159;
+        background-color: transparent;
+        font-size: 1.5rem;
+      }
+
+      .main-firstSection-btn:hover {
+        text-decoration: underline;
+      }
+
+      .main-description-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        margin-bottom: 5rem;
+      }
+
+      .main-description-box div {
+        width: 300px;
+        height: 150px;
+      }
+
+      .main-description-box p {
+        font-weight: 400;
+      }
+
+      .phone-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 1000px;
+        margin-bottom: 7rem;
+      }
+
+      .phone-wrapper img {
+        width: 300px;
+        height: 650px;
+      }
+
+      .phone-wrapper p {
+        font-weight: 300;
+      }
+
+      .phone-wrapper h3 {
+        color: #0e7159;
+      }
+
+      .phone-img-wrapper {
+        display: flex;
+        justify-content: space-around;
+        width: 1000px;
+      }
+
+      .phone-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .price-wrapper {
+        margin-bottom: 7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .price-info {
+        background-color: #f2f3f4;
+        padding: 0 0 1rem 1rem;
+        border-radius: 10px;
+        width: 300px;
+        margin: 0 1rem;
+        margin-bottom: 3rem;
+      }
+
+      .price-info h2 {
+        color: #0e7159;
+      }
+
+      .price-info p {
+        font-weight: 300;
+      }
+
+      .price-info button {
+        width: 280px;
+        height: 3rem;
+        font-size: 1rem;
+        border: none;
+        background-color: #0e7159;
+        color: white;
+        border-radius: 5px;
+      }
+
+      .comment-wrapper {
+        display: flex;
+        margin-bottom: 3rem;
+        overflow: hidden;
+      }
+
+      .comment-wrapper > div {
+        border-radius: 10px;
+        background-color: #f2f3f4;
+        width: 620px;
+        height: 360px;
+      }
+
+      .comment-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .comment-box img {
+        border-radius: 50px;
+        margin-right: 2rem;
+      }
+
+      .comment-box p {
+        font-weight: 300;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="./image/logo_safehomes.png" alt="" width="160px" />
+      <div>
+        <button class="inquiry-btn">문의하기</button>
+        <button class="start-btn">시작하기</button>
+      </div>
+    </header>
+    <article>
+      <h1>내 집 보증금,</h1>
+      <h1>경매로 날아가면 어떻게 하지?</h1>
+      <button class="article-btn">지금 걱정 해결하기 ></button>
+    </article>
+    <main>
+      <div class="main-firstSection">
+        <h1
+          style="
+            font-size: 3rem;
+            color: #0e7159;
+            margin-bottom: 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+          "
+        >
+          <span style="font-weight: 300">세이프홈즈,</span> 전/월세 보증금
+          지킴이 서비스입니다.
+        </h1>
+        <div class="main-image-wrapper">
+          <div style="margin-bottom: 3rem">
+            <img src="./image/img_sec01_01.png" alt="" />
+            <h3 style="color: #333d4b; margin-bottom: 0.25rem">
+              등기부등본 등을 분석한<br />
+              보증금 지킴이 리포트
+            </h3>
+            <p style="width: 300px; font-weight: 300">
+              내 보증금을 어떻게 지킬수 있을까? 라는 단계를 거쳐서 여러분들에게
+              계약전 보증금 지킴이 리포트 제공
+            </p>
+          </div>
+          <div>
+            <img src="./image/img_sec01_02.png" alt="" />
+            <h3 style="color: #333d4b; margin-bottom: 0.25rem">
+              보증금 보호를 위한<br />
+              Check-List
+            </h3>
+            <p style="width: 300px; font-weight: 300">
+              내 보증금을 어떻게 지킬수 있을까? 라는 단계를 거쳐서 여러분들에게
+              계약전 보증금 지킴이 리포트 제공
+            </p>
+          </div>
+          <div>
+            <img src="./image/img_sec01_03.png" alt="" />
+            <h3 style="color: #333d4b; margin-bottom: 0.25rem">
+              등기부등본 변동에<br />
+              따른 실시간 알림 서비스
+            </h3>
+            <p style="width: 300px; font-weight: 300">
+              내 보증금을 어떻게 지킬수 있을까? 라는 단계를 거쳐서 여러분들에게
+              계약전 보증금 지킴이 리포트 제공
+            </p>
+          </div>
+        </div>
+        <button class="main-firstSection-btn">지금 바로 사용하기 ></button>
+      </div>
+      <!--  -->
+      <div class="main-firstSection">
+        <h1
+          style="
+            font-size: 3rem;
+            color: #0e7159;
+            margin-bottom: 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+          "
+        >
+          부동산을 찾았지만 망설이고 계시나요?
+        </h1>
+        <div class="main-image-wrapper">
+          <div style="margin-bottom: 3rem">
+            <img src="./image/img_sec02_01.png" alt="" />
+            <h3 style="color: #333d4b; margin-bottom: 0.25rem; width: 300px">
+              부동산 중개 업자는 항상 괜찮다고 한다. 과연 그럴까?
+            </h3>
+            <p style="width: 300px; font-weight: 300">
+              내 보증금을 어떻게 지킬수 있을까? 라는 단계를 거쳐서 여러분들에게
+              계약전 보증금 지킴이 리포트 제공
+            </p>
+          </div>
+          <div>
+            <img src="./image/img_sec02_02.png" alt="" />
+            <h3 style="color: #333d4b; margin-bottom: 0.25rem; width: 300px">
+              절차가 이것저것 너무 많은데 빠뜨린 절차가 있지 않을까?
+            </h3>
+            <p style="width: 300px; font-weight: 300">
+              내 보증금을 어떻게 지킬수 있을까? 라는 단계를 거쳐서 여러분들에게
+              계약전 보증금 지킴이 리포트 제공
+            </p>
+          </div>
+          <div>
+            <img src="./image/img_sec02_03.png" alt="" />
+            <h3 style="color: #333d4b; margin-bottom: 0.25rem; width: 300px">
+              평생 힘들게 모은 보증금을 나중에 돌려 받지 못하면...
+            </h3>
+            <p style="width: 300px; font-weight: 300">
+              내 보증금을 어떻게 지킬수 있을까? 라는 단계를 거쳐서 여러분들에게
+              계약전 보증금 지킴이 리포트 제공
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 7rem;
+        "
+      >
+        <h1
+          style="
+            font-size: 3rem;
+            color: #0e7159;
+            margin-bottom: 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+          "
+        >
+          <span style="font-weight: 400">세이프홈즈,</span> 어떻게 내 보증금을
+          지킬 수 있을까요?
+        </h1>
+        <div class="main-description-box">
+          <div>
+            <h3 style="color: #0e7159; font-weight: 400">#1</h3>
+            <h3>계약 전 주소 검색</h3>
+            <p>
+              내 보증금을 어떻게 지킬수 있을까? 라는 단계를 거쳐서 여러분들에게
+              계약전 보증금 지킴이 리포트 제공
+            </p>
+          </div>
+          <div>
+            <h3 style="color: #0e7159; font-weight: 400">#2</h3>
+            <h3>계약 전 주소 검색</h3>
+            <p>
+              내 보증금을 어떻게 지킬수 있을까? 라는 단계를 거쳐서 여러분들에게
+              계약전 보증금 지킴이 리포트 제공
+            </p>
+          </div>
+          <div>
+            <h3 style="color: #0e7159; font-weight: 400">#3</h3>
+            <h3>계약 전 주소 검색</h3>
+            <p>
+              내 보증금을 어떻게 지킬수 있을까? 라는 단계를 거쳐서 여러분들에게
+              계약전 보증금 지킴이 리포트 제공
+            </p>
+          </div>
+          <div>
+            <h3 style="color: #0e7159; font-weight: 400">#4</h3>
+            <h3>계약 전 주소 검색</h3>
+            <p>
+              내 보증금을 어떻게 지킬수 있을까? 라는 단계를 거쳐서 여러분들에게
+              계약전 보증금 지킴이 리포트 제공
+            </p>
+          </div>
+          <div>
+            <h3 style="color: #0e7159; font-weight: 400">#5</h3>
+            <h3>계약 전 주소 검색</h3>
+            <p>
+              내 보증금을 어떻게 지킬수 있을까? 라는 단계를 거쳐서 여러분들에게
+              계약전 보증금 지킴이 리포트 제공
+            </p>
+          </div>
+        </div>
+        <button class="main-firstSection-btn">조금 더 알아보기 ></button>
+      </div>
+      <div class="phone-wrapper">
+        <div class="phone-img-wrapper">
+          <img src="./image/img_phone01.png" alt="" />
+          <div style="width: 300px">
+            <h3>리포트</h3>
+            <h2>등기부 등본 등을 분석한 보증금 지킴이 리포트</h2>
+            <p>
+              어려운 부동산 법률 용어가 아닌, 누구나 쉽게 이해 할 수 있는 보증금
+              지킴이 리포트 제공
+            </p>
+          </div>
+        </div>
+        <div class="phone-img-wrapper">
+          <div style="width: 300px">
+            <h3>절차</h3>
+            <h2>보증금 보호를 위한,<br />체크리스트</h2>
+            <p>
+              전세 사기 당하지 않기 위해 반드시 확인해야 할 체크리스트를
+              제공합니다.
+            </p>
+          </div>
+          <img src="./image/img_phone02.png" alt="" />
+        </div>
+        <div class="phone-img-wrapper">
+          <img src="./image/img_phone03.png" alt="" />
+          <div style="width: 300px">
+            <h3>알림</h3>
+            <h2>등기부 등본 변동에 따른 실시간 알리미</h2>
+            <p>
+              어떤 말도 듣지 못 했는데 집 주인이 바뀌었다고? 세이프홈즈가 즉각
+              알려드립니다.
+            </p>
+            <img
+              src="./image/img_msg_01.png"
+              alt=""
+              style="object-fit: contain; height: 100px"
+            />
+            <img
+              src="./image/img_msg_02.png"
+              alt=""
+              style="object-fit: contain; height: 100px"
+            />
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="price-wrapper">
+        <h2 style="color: #0e7159; text-align: center; font-size: 3rem">
+          <span style="font-weight: 400">세이프홈즈,</span> 서비스 가격은 어떻게
+          될까요?
+        </h2>
+        <div style="display: flex">
+          <div class="price-info">
+            <h3>전/월세 보증금<br />지킴이 리포트</h3>
+            <p>
+              해당 플랜은 여러분을 위해 리포트를 제공합니다. 실제로 이 리포트는
+              언제 어디서든지 사용할 수 있고 그렇습니다.
+            </p>
+            <h2>80,000KRW</h2>
+            <p>1회 50,000원 / 1주 80,000원</p>
+            <button>지금 바로 사용하기</button>
+          </div>
+          <div class="price-info">
+            <h3>등기부 등본 변동<br />알림 서비스</h3>
+            <p>
+              해당 플랜은 여러분을 위해 리포트를 제공합니다. 실제로 이 리포트는
+              언제 어디서든지 사용할 수 있고 그렇습니다.
+            </p>
+            <h2>50,000KRW</h2>
+            <p>1회 50,000원 / 2년 80,000원</p>
+            <button>지금 바로 사용하기</button>
+          </div>
+          <div class="price-info">
+            <h3>올 패키지<br />(지킴이 리포트 + 알림)</h3>
+            <p>
+              해당 플랜은 여러분을 위해 리포트를 제공합니다. 실제로 이 리포트는
+              언제 어디서든지 사용할 수 있고 그렇습니다.
+            </p>
+            <h2>100,000KRW</h2>
+            <p>1주년 + 2주년 100,000원</p>
+            <button>지금 바로 사용하기</button>
+          </div>
+        </div>
+        <button class="main-firstSection-btn" style="width: 25rem">
+          원하시는 플랜이 없다면 문의주세요! >
+        </button>
+      </div>
+      <!--  -->
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 7rem;
+        "
+      >
+        <h1 style="color: #0e7159; text-align: center; font-size: 3rem">
+          <span style="font-weight: 400">세이프홈즈,</span> 없었으면 큰일 날
+          뻔했어요!
+        </h1>
+        <div class="comment-wrapper">
+          <div class="comment-box">
+            <div style="width: 600px; height: 280px">
+              <div style="display: flex; margin-bottom: 5rem">
+                <img
+                  src="image/img_reserv01.png"
+                  alt=""
+                  width="100"
+                  height="100"
+                />
+                <div>
+                  <h3>홍길동님</h3>
+                  <p>전/월세 보증금 지킴이 리포트</p>
+                </div>
+              </div>
+              <p>
+                공인중개사가 계약을 너무 서두르는 느낌이 들어 불안했는데,
+                세이프홈즈를 통해서 리포트를 받아보니 아니나 다를까 위험요소가
+                너무 큰 매물이었습니다. 근저당이 너무 높게 잡혀있었고, 보증보험
+                적합 대상도 아니라 경매로 넘어가게 되면 보증금을 돌려받기 힘들
+                것 같아 해당 매물 계약을 포기하고, 더 안전한 매물을 찾아서
+                계약할 수 있었습니다.
+              </p>
+            </div>
+          </div>
+          <div class="comment-box" style="margin: 0 2rem">
+            <div style="width: 600px; height: 280px">
+              <div style="display: flex; margin-bottom: 5rem">
+                <img
+                  src="image/img_reserv02.png"
+                  alt=""
+                  width="100"
+                  height="100"
+                />
+                <div>
+                  <h3>홍길동님</h3>
+                  <p>전/월세 보증금 지킴이 리포트</p>
+                </div>
+              </div>
+              <p>
+                공인중개사가 계약을 너무 서두르는 느낌이 들어 불안했는데,
+                세이프홈즈를 통해서 리포트를 받아보니 아니나 다를까 위험요소가
+                너무 큰 매물이었습니다. 근저당이 너무 높게 잡혀있었고, 보증보험
+                적합 대상도 아니라 경매로 넘어가게 되면 보증금을 돌려받기 힘들
+                것 같아 해당 매물 계약을 포기하고, 더 안전한 매물을 찾아서
+                계약할 수 있었습니다.
+              </p>
+            </div>
+          </div>
+          <div class="comment-box">
+            <div style="width: 600px; height: 280px">
+              <div style="display: flex; margin-bottom: 5rem">
+                <img
+                  src="image/img_reserv03.png"
+                  alt=""
+                  width="100"
+                  height="100"
+                />
+                <div>
+                  <h3>홍길동님</h3>
+                  <p>전/월세 보증금 지킴이 리포트</p>
+                </div>
+              </div>
+              <p>
+                공인중개사가 계약을 너무 서두르는 느낌이 들어 불안했는데,
+                세이프홈즈를 통해서 리포트를 받아보니 아니나 다를까 위험요소가
+                너무 큰 매물이었습니다. 근저당이 너무 높게 잡혀있었고, 보증보험
+                적합 대상도 아니라 경매로 넘어가게 되면 보증금을 돌려받기 힘들
+                것 같아 해당 매물 계약을 포기하고, 더 안전한 매물을 찾아서
+                계약할 수 있었습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="main-firstSection-btn" style="width: 25rem">
+          후기 진위여부 파악하러 가기 >
+        </button>
+      </div>
+    </main>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 1920px;
+        height: 768px;
+        background-color: #0e7159;
+      "
+    >
+      <h1 style="text-align: center; font-size: 3rem">
+        내 보증금, 안전하게 보호하려면<br />지금 시작하세요
+      </h1>
+      <button
+        style="
+          border: none;
+          border-radius: 5px;
+          background-color: white;
+          color: #0e7159;
+          width: 10rem;
+          height: 3rem;
+          font-weight: 600;
+        "
+      >
+        지금 바로 시작하기
+      </button>
+    </div>
+    <footer>
+      <div style="margin-left: 5rem">
+        <h3>(주)세이프홈즈</h3>
+        <p style="font-weight: 300">
+          사업자 등록 번호 : 250-26-01109 | 대표 : 정동훈 <br />경기도 성남시
+          수정구 대왕판교로 815 기업지원허브 혁신기술존 260-3호 <br />문의 메일
+          : safehomes.kr@gmail.com
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
