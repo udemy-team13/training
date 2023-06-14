@@ -26,6 +26,21 @@
         justify-content: center;
       }
 
+      .info-wrapper {
+        display: flex;
+        border-radius: 10px;
+        padding: 1rem 2rem;
+        box-shadow: 3px 3px 3px 3px gray;
+      }
+
+
+      .info-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid gray;
+      }
+
       .container img {
         box-sizing: border-box;
         border: 3px solid black;
@@ -34,7 +49,8 @@
 
       .container a {
         text-decoration: none;
-        color: orange;
+        color: orange !important;
+        color: blue;
       }
 
       .container a:hover {
@@ -43,6 +59,20 @@
 
       .description {
         margin-left: 1rem;
+        font-size: 1.25rem;
+      }
+
+      .container ul {
+        font-size: 1.25rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        .container ul {
+        font-size: 0.75rem;
+      }
+      .description {
+        font-size: 0.75rem;
+      }
       }
     </style>
   </head>
@@ -51,8 +81,9 @@
     <h1>자기소개</h1>
   </header>
   <div class="container">
-    <div>
-      <img src="/duck.png" width="100" style="border-radius: 50px;"/>
+    <div class="info-wrapper">
+    <div class="info-image">
+      <img src="./duck.png" width="100" style="border-radius: 50px;"/>
     </div>
     <ul>
       <li>이름 : <span>이재훈</span></li>
@@ -66,7 +97,7 @@
       <li>코딩 시작한 기간 : 6~8개월</li>
       <li> 기술스택 : JS, CSS, React.JS ... 더 쌓아갈 예정! 
       </li>
-    </ul>
+    </ul></div>
   </div>
   <h2 style="text-align: center;">🧑‍💻 매일 발전하는 개발자 지망생 🧑‍💻</h2>
   <hr>

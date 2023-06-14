@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/6fde4bb4c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .wrapper {
+        position: relative;
+        background-color: ivory;
+        box-shadow: 1px 1px 1px 1px gray;
+        border-radius: 10px;
+        text-align: center;
+        width: 7rem;
+        padding: 1.5rem 0;
+      }
+
+      .dropdown-content {
+        position: absolute;
+        top: 50px;
+        background-color: ivory;
+        box-shadow: 1px 1px 1px 1px gray;
+        border-radius: 10px;
+        text-align: center;
+        width: 7rem;
+        padding: 1.5rem 0;
+        display: none;
+      }
+      .wrapper:hover .dropdown-content {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <span>메뉴</span>
+      <div class="dropdown-content">
+        <a href="">항목1</a>
+        <a href="">항목2</a>
+        <a href="">항목3</a>
+      </div>
+    </div>
+    <i class="fa-brands fa-tiktok"></i>
+  </body>
+</html>
