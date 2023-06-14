@@ -1,0 +1,62 @@
+        <!doctype html>
+        <html>
+          <head>
+            <!-- Place your kit's code here -->
+            <script src="https://kit.fontawesome.com/6dfcab80eb.js" crossorigin="anonymous"></script>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap" rel="stylesheet">            <style>
+              .title{
+                font-family: 'Gasoek One', sans-serif;              
+              }
+              nav{
+                display:flex;
+              }
+              nav>div{
+                padding: 20px;
+                background-color: #ddd;
+                width:30px;
+                height:30px;
+                text-align: center;
+                line-height: 30px;
+                border-radius:10px;
+                margin:5px;
+                font-size:1.5rem;
+                font-weight: bold;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              }
+
+              nav>div:hover{
+                background-color: #333;
+                color:white;                
+              }
+
+
+              a:active{
+                background-color: #333;
+                color:white;
+              }
+            </style>
+          </head>
+          <body>
+            <p style="font-size:2.3rem;" class="title">Here !!!</p>
+            <nav>event.target
+              <div onclick="activate(event.target)"><a href="#">1</a></div>
+              <div onclick="activate(event.target)"><a href="#">2</a></div>
+              <div onclick="activate(event.target)"><a href="#">3</a></div>
+              <div onclick="activate(event.target)"><a href="#">4</a></div>
+              <div onclick="activate(event.target)"><a href="#">5</a></div>
+            </nav>
+            <script>
+              function activate(k){
+                k.style.color="white";
+                k.style.backgroundColor="black";
+              }
+            </script>
+          </body>
+
+          <div></div>
+        </html>
+        

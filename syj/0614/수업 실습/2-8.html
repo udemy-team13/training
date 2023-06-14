@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=S, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:1000px;
+            height:1000px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes spin{
+            0%{
+                transform:rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+
+        .spin{
+            animation: spin 2s linear infinite;
+        }
+        .circle{
+            background-color: gray;
+            width:500px;
+            height:500px;
+            border-radius: 100%;
+            padding:0px;
+            margin:0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spin">
+            <div class="circle">
+                <div style="background-color:red; width:100px; height:100px;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
