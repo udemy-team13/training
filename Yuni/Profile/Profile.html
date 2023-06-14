@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Profile 🤹🏻‍♀️</title>
+  <link rel="stylesheet" href="Profile.css">
 </head>
 
 <body>
@@ -13,73 +14,36 @@
     <h1 class="header">Hi, I'm Yuni!</h1>
   </div>
   <section class="section">
-    <img src="bondee.png" class="myImage">
+    <img src="./images/bondee.png" class="myImage">
     <div class="link">
       <a href="https://moonrise002.tistory.com" class="link">Blog</a>
       <a href="https://github.com/Yuni0221" class="link">GitHub</a>
     </div>
-    <dl>
-      <dt class="detail">🏡 Based In Seoul</dt>
-      <dt class="detail">🤹🏻‍♀️ INFP </dt>
-      <dt class="detail">🧐 뛰어난 공감능력, 저는 생각이 많아요, 불의를 못 참아요</dt>
-      <dt class="detail">⚽️ 축구 보는 것을 좋아해요. 토트넘 팬입니다.</dt>
-      <dt class="detail">🍽️ 떡볶이, 군것질을 즐깁니다. 곱창, 순대, 닭발 🙅🏻‍♀️</dt>
-      <dt class="detail">🍐 What I love</dt>
-      <img src="choco.png" class="image">
-    </dl>
-    <footer class="footer">Copy right ©2023 Yuni</footer>
+    <div class="introduce">
+      <p class="detail">🏡 Based In Seoul</p>
+      <p class="detail">🤹🏻‍♀️ INFP </p>
+      <p class="detail">🧐 뛰어난 공감능력, 저는 생각이 많아요, 불의를 못 참아요.</p>
+      <p class="detail">⚽️ 축구 보는 것을 좋아해요. 토트넘 팬이에요.</p>
+      <p class="detail">🍽️ 떡볶이, 군것질을 즐깁니다. 곱창, 순대, 닭발 🙅🏻‍♀️</p>
+      <p class="detail_lan">📝 HTML, CSS, JavaScript, TypeScript, React</p>
+
+      <p class="image_section">🍐 What I love</p>
+      <div class="image_section1">
+        <img src="./images/choco.png" class="image">
+        <img src="./images/sea.jpg" class="image">
+        <img src="./images/flower.jpg" class="image">
+        <img src="./images/coffee.jpg" class="image">
+      </div>
+      <div class="image_section2">
+        <img src="./images/paris.jpg" class="image">
+        <img src="./images/jelly.jpg" class="image">
+        <img src="./images/toystory.jpg" class="image">
+        <img src="./images/cake.jpg" class="image">
+      </div>
+    </div>
+    <footer class="footer">Copy right ©2023 Yuni. All rights reserved. </footer>
   </section>
 
 </body>
-<style>
-  .header {
-    display: flex;
-    height: 40px;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    padding-top: 80px;
-  }
-
-  .section {
-    display: flex;
-    width: full;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-  }
-
-  .link {
-    margin-top: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #957745;
-    padding: 14px;
-    font-size: 20px;
-  }
-
-  .myImage {
-    width: 300px;
-    border-radius: 100%;
-    padding-top: 30px;
-  }
-
-  .detail {
-    margin-top: 30px;
-    margin-bottom: 10px;
-  }
-
-  .image {
-    width: 140px;
-  }
-
-  .footer {
-    display: inline-block;
-    height: 100px;
-    margin-top: 100px;
-    color: rgb(134, 132, 132);
-  }
-</style>
 
 </html>
