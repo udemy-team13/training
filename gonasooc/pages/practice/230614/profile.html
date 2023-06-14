@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+      v2.0 | 20110126
+      License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+      line-height: 1.5;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    body {
+      line-height: 1;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    .img-box {
+      width: 200px;
+      height: 200px;
+    }
+
+    .img-box .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .article-title {
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    .header {
+      background-color: #000;
+      padding: 50px 0;
+    }
+
+    .header-title {
+      font-size: 30px;
+      font-weight: 600;
+      text-align: center;
+      color: #fff;
+    }
+
+    .section {
+      padding: 50px;
+    }
+
+    .article-box {
+      padding: 20px;
+      box-shadow: 10px 10px 45px -11px rgba(0,0,0,0.75);
+      margin-bottom: 20px;
+      border-radius: 20px;
+    }
+
+    .article-title {
+      margin-bottom: 10px;
+    }
+
+    .list, .info {
+      font-size: 18px;
+    }
+
+    .footer {
+      background-color: #000;
+      padding: 20px 0;
+    }
+
+    .copyright {
+      color: #fff;
+      text-align: center;
+    }
+
+
+    @media all and (max-width: 768px) {
+
+      .header {
+        padding: 20px 0;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .img-box {
+        width: 100px;
+        height: 100px;
+      }
+
+      .article-title {
+        font-size: 16px;
+      }
+
+      .header-title {
+        font-size: 20px;
+      }
+
+      .list, .info {
+        font-size: 16px;
+      }
+
+      .copyright {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-title">자기소개</h1>
+  </header>
+  <main class="main">
+    <section class="section">
+      <article class="article">
+        <div class="article-box">
+          <div class="img-box">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="프로필사진" class="img">
+          </div>
+        </div>
+
+        <div class="article-box">
+          <dl>
+            <dt class="article-title">이름</dt>
+            <dd class="info">- 최관수</dd>
+          </dl>
+        </div>
+        <div class="article-box">
+          <h4 class="article-title">백그라운드</h4>
+          <ul>
+            <li class="list">남양주시 거주</li>
+            <li class="list">퍼블리싱 경험 있음</li>
+          </ul>
+        </div>
+        <div class="article-box">
+          <h4 class="article-title">취미</h4>
+          <ul>
+            <li class="list">음악감상</li>
+            <li class="list">게임</li>
+            <li class="list">운동</li>
+            <li class="list">축구시청</li>
+          </ul>
+        </div>
+        <div class="article-box">
+          <h4 class="article-title">사랑하는 것</h4>
+          <ul>
+            <li class="list">음악</li>
+            <li class="list">맥주</li>
+            <li class="list">공연</li>
+            <li class="list">게임</li>
+          </ul>
+        </div>
+        <div class="article-box">
+          <h4 class="article-title">특기</h4>
+          <ol>
+            <li class="list">자기</li>
+            <li class="list">누워있기</li>
+          </ol>
+        </div>
+        <div class="article-box">
+          <h4 class="article-title">강점</h4>
+          <ol>
+            <li class="list">책임감</li>
+            <li class="list">원만한 인간관계</li>
+          </ol>
+        </div>
+        <div class="article-box">
+          <dl>
+            <dt class="article-title">취업하고자 하는 회사</dt>
+            <dd class="info">- 근본 있는 회사</dd>
+          </dl>
+        </div>
+        <div class="article-box">
+          <dl>
+            <dt class="article-title">MBTI</dt>
+            <dd class="info">- ISFJ</dd>
+          </dl>
+        </div>
+        <div class="article-box">
+          <dl>
+            <dt class="article-title">GitHub</dt>
+            <dd><a class="info" href="https://github.com/gonasooc" target="_blank">https://github.com/gonasooc</a></dd>
+          </dl>
+        </div>
+        <div class="article-box">
+          <dl>
+            <dt class="article-title">나의 목표</dt>
+            <dd class="info">퍼펙트한 팀 프로젝트! 13조 화이팅!</dd>
+          </dl>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="copyright">저작권&copy;2023 웹사이트. All rights reserved.</p>
+  </footer>
+</body>
+</html>

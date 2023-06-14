@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습3</title>
+  <script src="https://kit.fontawesome.com/6eae2ae2f2.js" crossorigin="anonymous"></script>
+  <style>
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+      v2.0 | 20110126
+      License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+      line-height: 1.5;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    body {
+      line-height: 1;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    
+    .sf-header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 20px 0;
+      background-color: #fff;
+    }
+
+    .sf-logo-img-grp {
+      width: 80px;
+      height: 20px;
+    }
+
+    .sf-logo-img {
+      background-image: url("data:image/svg+xml,%3Csvg id='Layer_2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 490.55 124.74'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%238091e6;opacity:.5;%7D.cls-2%7Bfill:%238ab7ff;%7D.cls-3%7Bfill:%230059ff;%7D%3C/style%3E%3C/defs%3E%3Cg id='Layer_1-2'%3E%3Cg%3E%3Cg%3E%3Cpath class='cls-2' d='M401.78,107.29c11.21,10.79,26.42,17.45,43.21,17.45,18,0,34.17-7.67,45.56-19.87l-43.18-43.18-45.59,45.59Z'/%3E%3Cpath class='cls-2' d='M444.99,0c-16.45,0-31.36,6.41-42.51,16.82l44.89,44.89,42.54-42.54c-11.35-11.79-27.26-19.16-44.92-19.16Z'/%3E%3Cpath class='cls-3' d='M402.49,16.82c-12.2,11.38-19.87,27.56-19.87,45.56s7.37,33.57,19.16,44.92l45.59-45.59-44.89-44.89Z'/%3E%3C/g%3E%3Cg%3E%3Cpolygon class='cls-3' points='265.54 36.4 265.54 .02 190.21 .02 142.83 .02 142.83 36.4 142.83 50.26 142.83 86.04 142.83 124.1 190.21 124.1 190.21 86.04 237.59 86.04 237.59 50.26 190.21 50.26 190.21 36.4 265.54 36.4'/%3E%3Cg%3E%3Crect class='cls-2' x='142.83' y='86.04' width='47.38' height='38.05'/%3E%3Crect class='cls-2' x='142.83' y='36.4' width='47.38' height='13.86'/%3E%3Crect class='cls-2' x='190.21' y='.02' width='75.33' height='36.38'/%3E%3Crect class='cls-2' x='190.21' y='50.26' width='47.38' height='35.79'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath class='cls-2' d='M122.75,.43H41.53C18.65,.43,.1,18.93,0,41.79H81.23c22.88,0,41.43,18.5,41.52,41.36h0V.43Z'/%3E%3Cpath class='cls-1' d='M0,41.95c0-.06,0-.11,0-.17H0v.17Z'/%3E%3Cpath class='cls-2' d='M0,41.95V124.5H81.56c22.75,0,41.19-18.44,41.19-41.19h0c0-.06,0-.11,0-.17H41.2C18.45,83.14,0,64.7,0,41.95Z'/%3E%3C/g%3E%3Cpath class='cls-3' d='M41.19,83.14H122.74c-.09-22.86-18.64-41.36-41.52-41.36H0c0,.06,0,.11,0,.17H0c0,22.75,18.44,41.19,41.19,41.19Z'/%3E%3C/g%3E%3Cg%3E%3Cpolygon class='cls-2' points='251.4 124.1 313.09 124.1 313.09 .02 251.4 124.1'/%3E%3Cpolygon class='cls-3' points='313.09 124.1 374.79 124.1 313.09 .02 313.09 124.1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+    }
+
+    .header-inner-wrap {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .sf-gnb-wrap {
+      flex-grow: 1;
+    }
+
+    .sf-gnb-wrap .sf-gnb-grp {
+      display: grid;
+      place-items: center;
+      grid-template-columns: repeat(6, 1fr);
+      /* grid-template-columns: 1fr minmax(max-content, 1fr) 1fr; */
+      /* grid-template-columns: minmax(auto, max-content); */
+      /* grid-template-columns: fit-content(300px) fit-content(300px); */
+    }
+
+    /* .sf-gnb-list {
+      min-width: 120px;
+    } */
+
+    .sf-gnb-link {
+      position: relative;
+      font-size: 14px;
+      font-weight: 700;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .sf-gnb-link.blue-txt {
+      color: blue;
+    }
+
+    .sf-gnb-link.red-dot::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: auto;
+      right: -15px;
+      top: -5px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: red;
+    }
+
+    .sf-gnb-link.blue-dot::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: auto;
+      right: -15px;
+      top: -5px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: blue;
+    }
+
+    .sf-flex-list-grp {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .sf-flex-list {
+      width: calc(100% / 3);
+    }
+
+    .sf-flex-link {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+    }
+    
+    .sf-flex-list-img-grp {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 150px;
+    }
+    
+    .sf-flex-list-img-grp .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all .4s;
+      filter: brightness(80%);
+
+    }
+
+    .sf-flex-list-img-grp:hover .img {
+      transform: scale(1.1);
+    }
+    
+    .sf-flex-list-img-grp .sf-flex-list-badge {
+      position: absolute;
+      left: auto;
+      top: 10px;
+      right: 10px;
+      display: inline-block;
+      background-color: #fff;
+      color: blue;
+      font-size: 12px;
+      border-radius: 10px;
+      padding: 0 10px;
+      font-weight: 600;
+    }
+
+    .sf-flex-list-txt-grp {
+      padding: 10px;
+    }
+
+    .sf-flex-list-deadline-badge {
+      display: inline-block;
+      background-color: rgba(0, 0, 0, 0.2);
+      color: green;
+      border-radius: 10px;
+      padding: 2px 5px;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .sf-flex-list-title {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 14px;
+      color: #000;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+
+    .sf-flex-list-dec {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.7);
+      margin-bottom: 10px;
+      min-height: 54px;
+    }
+
+    .sf-flex-list-txt-bottom-grp {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sf-flex-list-txt-bottom-left-txt {
+      color: #000;
+      font-weight: 800;
+      font-size: 12px;
+    }
+
+    .sf-flex-list-txt-bottom-right-txt {
+      color: #000;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .sf-flex-list-btn-grp {
+      width: 100%;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+
+    .sf-flex-list-btn {
+      border-radius: 0;
+      background-color: transparent;
+      border: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding: 0;
+      outline: none;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 5px 0;
+      background-color: blue;
+      color: #fff;
+      border-radius: 10px;
+    }
+
+    .sf-flex-list-btn .icon {
+      margin-right: 5px;
+    }
+
+    .sf-flex-list-btn:disabled {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .sf-flex-list-btn:disabled .icon {
+      display: none;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <header class="sf-header">
+    <div class="header-inner-wrap">
+      <div class="sf-logo-wrap">
+        <div class="sf-logo-img-grp">
+          <h2 class="sf-logo-img"></h2>    
+        </div>
+      </div>
+      <div class="sf-gnb-wrap">
+        <ul class="sf-gnb-grp">
+          <li class="sf-gnb-list">
+            <a href="#" class="sf-gnb-link">스펙소개</a>
+          </li>
+          <li class="sf-gnb-list">
+            <a href="#" class="sf-gnb-link red-dot">교육과정</a>
+          </li>
+          <li class="sf-gnb-list">
+            <a href="#" class="sf-gnb-link">공지사항</a>
+          </li>
+          <li class="sf-gnb-list">
+            <a href="#" class="sf-gnb-link">수료생 커뮤니티</a>
+          </li>
+          <li class="sf-gnb-list">
+            <a href="#" class="sf-gnb-link">협력사</a>
+          </li>
+          <li class="sf-gnb-list">
+            <a href="#" class="sf-gnb-link blue-txt blue-dot">스팩블로그</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main style="height: 2000px; padding-top: 100px;">
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus quaerat eligendi hic neque omnis accusantium, nam unde sapiente nemo? Pariatur iure saepe voluptas amet adipisci repellat dolorum iusto ad quis.</p>
+  <div class="sf-flex-list-container">
+    <ul class="sf-flex-list-grp">
+      <li class="sf-flex-list">
+        <a href="https://sniperfactory.com/course/flutter3" class="sf-flex-link">
+          <div class="sf-flex-list-img-grp">
+            <img src="../../../assets/images/img/img_sf_class_01.png" alt="커리큘럼썸네일" class="img">
+            <span class="sf-flex-list-badge">스팩</span>
+          </div>
+          <div class="sf-flex-list-txt-grp">
+            <p class="sf-flex-list-deadline-badge">신청가능</p>
+            <h5 class="sf-flex-list-title">Flutter 모바일 어플리케이션 개발 부트캠프과정</h5>
+            <p class="sf-flex-list-dec">4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는 어플리케이션"을 만들어보는 시간입니다.
+              Flutter와 Dart의 기초부터 심화, 응용까지 배워보고 나만의 어플리케이션으로 포트폴리오를 쌓아보세요.
+              최종적으로 기업의 실제 프로젝트까지 직접 진행할 수 있는 만큼의 개발자로 성장하세요!</p>
+            <div class="sf-flex-list-txt-bottom-grp">
+              <span class="sf-flex-list-txt-bottom-left-txt">취업연계과정</span>
+              <span class="sf-flex-list-txt-bottom-right-txt">기수: 3기<i class="fa-solid fa-rocket"></i></span>
+            </div>
+          </div>
+          <div class="sf-flex-list-btn-grp">
+            <button type="button" class="btn sf-flex-list-btn"><i class="fa-regular fa-circle-play icon" style="color: #fff;"></i><span>더 알아보기</span></button>
+          </div>
+        </a>
+      </li>
+      <li class="sf-flex-list">
+        <a href="https://sniperfactory.com/course/flutter3" class="sf-flex-link">
+          <div class="sf-flex-list-img-grp">
+            <img src="../../../assets/images/img/img_sf_class_02.jpg" alt="커리큘럼썸네일" class="img">
+            <span class="sf-flex-list-badge">유데미x웅진씽크빅x스팩</span>
+          </div>
+          <div class="sf-flex-list-txt-grp">
+            <p class="sf-flex-list-deadline-badge">신청가능</p>
+            <h5 class="sf-flex-list-title">10주 완성! 프로젝트 캠프 : 프론트엔드(리액트)</h5>
+            <p class="sf-flex-list-dec">[유데미x웅진씽크빅x스나이퍼팩토리]
+              10주 완성! 프로젝트 캠프 : 프론트엔드(리액트) 과정</p>
+            <div class="sf-flex-list-txt-bottom-grp">
+              <span class="sf-flex-list-txt-bottom-left-txt">무료교육과정</span>
+              <span class="sf-flex-list-txt-bottom-right-txt">기수: 1기<i class="fa-solid fa-rocket"></i></span>
+            </div>
+          </div>
+          <div class="sf-flex-list-btn-grp">
+            <button type="button" class="btn sf-flex-list-btn"><i class="fa-regular fa-circle-play icon" style="color: #fff;"></i><span>더 알아보기</span></button>
+          </div>
+        </a>
+      </li>
+      <li class="sf-flex-list">
+        <a href="https://sniperfactory.com/course/flutter3" class="sf-flex-link">
+          <div class="sf-flex-list-img-grp">
+            <img src="../../../assets/images/img/img_sf_class_03.jpg" alt="커리큘럼썸네일" class="img">
+            <span class="sf-flex-list-badge">KITRI x 스팩</span>
+          </div>
+          <div class="sf-flex-list-txt-grp">
+            <p class="sf-flex-list-deadline-badge">신청가능</p>
+            <h5 class="sf-flex-list-title">사업계획서 작성방법</h5>
+            <p class="sf-flex-list-dec">[KITRI(한국정보기술연구원) x SFAC]
+              사업계획서 작성방법 무료 특강</p>
+            <div class="sf-flex-list-txt-bottom-grp">
+              <span class="sf-flex-list-txt-bottom-left-txt">취업연계과정</span>
+              <span class="sf-flex-list-txt-bottom-right-txt">기수: 3기<i class="fa-solid fa-rocket"></i></span>
+            </div>
+          </div>
+          <div class="sf-flex-list-btn-grp">
+            <button type="button" class="btn sf-flex-list-btn" disabled><i class="fa-regular fa-circle-play icon" style="color: #fff;"></i><span>더 알아보기</span></button>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  </main>
+</body>
+</html>
