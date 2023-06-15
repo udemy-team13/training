@@ -554,9 +554,8 @@ html.ie .scroll-custom {
 
 .l-center {
   max-width: 580px;
-  width: 95%;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 10px;
 }
 
 .panel {
@@ -598,13 +597,17 @@ html.ie .scroll-custom {
 @media all and (max-width: 600px) {
   .footer-inner {
     max-width: 100%;
-    height: 48px;
   }
 }
 
 /* =================== main =================== */
 .profile-page {
   padding: 60px 0 30px;
+}
+@media all and (max-width: 600px) {
+  .profile-page {
+    padding: 40px 0 20px;
+  }
 }
 
 .typing-section {
@@ -658,6 +661,11 @@ html.ie .scroll-custom {
   font-size: 15px;
   line-height: 1.5;
   margin-bottom: 3px;
+}
+@media all and (max-width: 600px) {
+  .profile-detail-section .profile-detail-grp .profile-detail-list {
+    font-size: 14px;
+  }
 }
 
 .profile-img-section {
@@ -734,8 +742,13 @@ html.ie .scroll-custom {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  max-width: 80vw;
-  max-height: 80vw;
+  width: 50vh;
+  height: auto;
+}
+@media all and (max-width: 600px) {
+  .modal-img-wrap .modal-img-grp {
+    width: 80vw;
+  }
 }
 .modal-img-wrap .modal-img-grp .img {
   width: 100%;
