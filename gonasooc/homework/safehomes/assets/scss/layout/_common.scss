@@ -1,0 +1,24 @@
+/* =================== layout =================== */
+#app {
+  min-height: 100%;
+}
+
+#page {
+  min-height: 100%;
+}
+
+.l-center {
+  max-width: 1080px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+// l-center 안쪽에 별도 inner 필요한 경우 panel class 사용
+.panel {
+  max-width: 915px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// common
