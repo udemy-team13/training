@@ -1,0 +1,167 @@
+/* =================== helper =================== */
+// 노출되지 않을 영역
+.is-none {
+  display: none;
+}
+
+// 보이진 않지만 리딩되는 영역 - IR(Image Replacement) 기법
+.voice-only {
+  @include absolute($l: -9999rem);
+
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  color: transparent;
+}
+
+// 브라우저 크기별 레이아웃 보이기(노출 여부)
+
+// 모바일
+.mb-hide {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.mb-show {
+  display: none !important;
+
+  @include mobile {
+    display: block !important;
+  }
+}
+
+.mb-show-flex {
+  display: none !important;
+
+  @include mobile {
+    display: flex !important;
+  }
+}
+
+.mb-show-ib {
+  display: none !important;
+
+  @include mobile {
+    display: inline-block !important;
+  }
+}
+
+// 태블릿
+.tab-hide {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.tab-show {
+  display: none !important;
+
+  @include tablet {
+    display: block !important;
+  }
+}
+
+.tab-show-flex {
+  display: none !important;
+
+  @include tablet {
+    display: flex !important;
+  }
+}
+
+.tab-show-ib {
+  display: none !important;
+
+  @include tablet {
+    display: inline-block !important;
+  }
+}
+
+// 360px
+.sm-hide {
+  @include media(360px) {
+    display: none !important;
+  }
+}
+
+.sm-show {
+  display: none !important;
+
+  @include media(360px) {
+    display: block !important;
+  }
+}
+
+.sm-show-flex {
+  display: none !important;
+
+  @include media(360px) {
+    display: flex !important;
+  }
+}
+
+.sm-show-ib {
+  display: none !important;
+
+  @include media(360px) {
+    display: inline-block !important;
+  }
+}
+
+// 320px
+.xsm-hide {
+  @include media(320px) {
+    display: none !important;
+  }
+}
+
+.xsm-show {
+  display: none !important;
+
+  @include media(320px) {
+    display: block !important;
+  }
+}
+
+.xsm-show-flex {
+  display: none !important;
+
+  @include media(320px) {
+    display: flex !important;
+  }
+}
+
+.xsm-show-ib {
+  display: none !important;
+
+  @include media(320px) {
+    display: inline-block !important;
+  }
+}
+
+// flexible content wrap
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+// scroll custom element에 height 지정 필수
+.scroll-custom {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: color(secondary);
+  }
+
+  @include ie-style {
+    scrollbar-arrow-color: color(primary);
+    scrollbar-face-color: color(primary);
+    scrollbar-track-color: color(secondary);
+  }
+}

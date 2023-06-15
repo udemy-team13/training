@@ -1,0 +1,100 @@
+/* =================== button =================== */
+// .btn-wrap .btn-fixed-wrap btn-double-wrap ...
+.btn {
+  @include input-reset;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: gray;
+    cursor: default;
+  }
+}
+
+// 버튼 높이
+@each $name,
+$height in $btn-height {
+  .btn-#{$name} {
+    height: $height + px;
+  }
+}
+
+.btn-full {
+  @include full;
+}
+
+// 버튼 색
+@each $name,
+$color in $btn-color {
+  .btn-#{$name} {
+    background-color: $color;
+    color: color(text); // 어두운배경 따로 color: white지정하기
+    transition: all 0.3s;
+
+    @include hover {
+      background-color: transparent;
+      border: 1px solid $color;
+    }
+  }
+}
+
+// 라인 버튼 색
+@each $name,
+$color in $btn-color {
+  .btn-bd-#{$name} {
+    border: 1px solid $color;
+    background-color: white;
+    color: $color;
+    transition: all 0.3s;
+
+    @include hover {
+      background-color: $color;
+      color: color(text);
+    }
+  }
+}
+
+// 고스트 버튼 색(배경색을 상속받아옴)
+@each $name,
+$color in $btn-color {
+  .btn-gst-#{$name} {
+    border: 1px solid $color;
+    color: $color;
+    transition: all 0.3s;
+
+    @include hover {
+      background-color: $color;
+      color: color(text);
+    }
+  }
+}
+
+@each $name,
+$color in $socail {
+  .btn-#{$name} {
+    background-color: $color;
+    color: #ffffff;
+  }
+}
+
+.btn-kakao {
+  color: #2b1718;
+}
+
+// 아이콘 버튼
+.btn-icon {
+  @include input-reset;
+  @include bg-op;
+
+  width: 50px;
+  height: 50px;
+}
+
+// 기능 버튼
+// .btn-back {
+//   @extend .btn-icon;
+//   @include bg-url();
+// }
