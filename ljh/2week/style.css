@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 10rem;
+  margin-bottom: 3rem;
+}
+
+button {
+  font-size: 1.25rem;
+  border: none;
+  background-color: blue;
+  color: white;
+  width: 7rem;
+  height: 3rem;
+}
+
+.container {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.container > div {
+  margin-right: 1rem;
+  width: 10rem;
+  height: 10rem;
+  /* background: linear-gradient(to bottom right, #ff0000, #00ff00); */
+  border: 3px dotted black;
+  border-radius: 5px;
+}
+/*  */
+
+.overlay {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  background-color: blue;
+}
+
+.item1 {
+  position: absolute;
+  z-index: 1;
+  width: 5rem;
+  height: 5rem;
+  top: 50px;
+  background-color: orange;
+}

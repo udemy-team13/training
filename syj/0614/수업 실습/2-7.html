@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: SpoqaHanSansNeo-Regular,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+        }        
+        @font-face {
+            font-family: 'SpoqaHanSansNeo-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .wrapper{
+            width:360px;
+            height:500px;
+            border-radius:10px;
+            border: 1px solid gray;
+            margin:auto;
+        }
+        .cover{
+            height: 40%;
+            overflow: hidden;
+        }
+
+        .tag{
+            background-color: #dcfce7;
+            color:#16a34a;
+            border-radius: 15px;
+            padding:5px;
+        }
+        img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        img:hover{
+            transform:scale(1.2);
+            filter:brightness(0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div style="position:relative;" class="cover">
+            <span style="z-index:10; position:absolute; right:10px; background-color:#f3e8ff; color:#9333ea" class="tag">스팩</span>
+            <img src="https://sniperfactory.com/api/files/courses/2g41rrrm5lttkl0/flutter3rd_qdbQ03hu4U.png"/>
+        </div>
+        <div style="margin:10px;">
+            <span class="tag">신청가능</span>
+            <p style="font-weight:bold; overflow:hidden; font-size:1.3rem;">Flutter 모바일 어플리케이션 개발 부..</p>
+            <p style="font-weight:100; color:lightgray;">4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는 어플리케이션"을 만들어보는 시간입니다.
+                Flutter와 Dart의 기초부터 심화, 응용까지 배워보고 나</p>
+            <div style="display:flex;">
+                <span style="background-color:lightgray; color:gray;" class="tag">취업연계과정</span>
+                <span style="margin-left:auto;">기수 : 3기 🚀</span>
+            </div>
+        </div>
+        <div class="tag" style="background-color:#3b82f6; color:white; height:30px; line-height:30px; margin:10px; text-align:center;">더 알아보기</div>
+    </div>
+</body>
+</html>

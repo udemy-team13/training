@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+          opacity: 1;
+        }
+        25% {
+          transform: rotate(180deg);
+          opacity: 0;
+        }
+        50% {
+          transform: rotate(90deg);
+          opacity: 1;
+        }
+        75% {
+          transform: rotate(270deg);
+          opacity: 0;
+        }
+        100% {
+          transform: rotate(360deg);
+          opacity: 1;
+        }
+      }
+
+      .circle {
+        background-color: blue;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 100%;
+        animation: spin 60s linear infinite;
+      }
+
+      .square {
+        width: 5rem;
+        height: 5rem;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="circle"><div class="square"></div></div>
+    </div>
+  </body>
+</html>
