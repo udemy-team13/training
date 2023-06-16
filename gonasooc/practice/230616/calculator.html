@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습</title>
+</head>
+<body>
+  <div class="calc-all-wrap">
+    <div class="input-grp">
+      <input type="text" id="printNum">
+    </div>
+    <div class="reset-btn-grp">
+      <button type="button" id="resetBtn">reset</button>
+      <button type="button" id="calculateBtn">=</button>
+    </div>
+    <div class="calc-btn-grp">
+      <div class="calc-operator-btn-grp">
+        <div class="calc-row-grp">
+          <button type="button" class="btn" value="+">+</button>
+          <button type="button" class="btn" value="-">-</button>
+          <button type="button" class="btn" value="*">*</button>
+          <button type="button" class="btn" value="/">/</button>
+        </div>
+      </div>
+      <div class="calc-num-btn-grp">
+        <div class="calc-row-grp">
+          <button type="button" class="btn num-btn" value="7">7</button>
+          <button type="button" class="btn num-btn" value="8">8</button>
+          <button type="button" class="btn num-btn" value="9">9</button>
+        </div>
+        <div class="calc-row-grp">
+          <button type="button" class="btn num-btn" value="4">4</button>
+          <button type="button" class="btn num-btn" value="5">5</button>
+          <button type="button" class="btn num-btn" value="6">6</button>
+        </div>
+        <div class="calc-row-grp">
+          <button type="button" class="btn num-btn" value="1">1</button>
+          <button type="button" class="btn num-btn" value="2">2</button>
+          <button type="button" class="btn num-btn" value="3">3</button>
+        </div>
+      </div>
+    </div>
+    <div class="result-grp">
+      <p id="resultElement">0</p>
+    </div>
+  </div>
+</body>
+
+<script>
+  let printNum = document.querySelector('#printNum');
+  let allBtnGrp = document.querySelector('.calc-btn-grp'); // 버튼 전체 그룹
+  let operatorBtnGrp = document.querySelector('.calc-operator-btn-grp'); // 연산자 버튼 그룹
+  let numBtnGrp = document.querySelector('.calc-num-btn-grp');
+  let resetBtn = document.querySelector('#resetBtn');
+  let resultElement = document.querySelector('#resultElement');
+  let firstNum = '';
+  let secondNum = '';
+  let resultNum = '';
+  let operator = '';
+
+  numBtnGrp.addEventListener('click', function(event) {
+    // console.log(event.target.value);
+    clickNumEvent();
+  })
+
+  operatorBtnGrp.addEventListener('click', function(event) {
+    clickOperatorEvent();
+  });
+
+  resetBtn.addEventListener('click', function(event) {
+    printNum.value = ''; // 초기화
+    console.log(printNum.value.length);
+  })
+
+  function clickNumEvent() { // 숫자키 눌렀을 때 이벤트
+    printNum.value = printNum.value.concat(event.target.value);    
+  }
+
+  function clickOperatorEvent() { // 연산자 눌렀을 때 이벤트
+    operator = event.target.value;
+    // console.log(operator);
+    if(printNum.value.length > 0) {
+      firstNum = Number(printNum.value);
+    }
+
+    printNum.value = ''; // 초기화
+  }
+
+  function clickResultEvent() { // 결과 버튼 이벤트
+    if(printNum.value.length > 0) {
+      secondNum = Number(printNum.value);
+    }
+    if(firstNum && secondNum && operator) {
+      if(operator === '+') {
+        resultNum = firstNum + secondNum;
+      } else if (operator === '-') {
+        resultNum = firstNum - secondNum;
+      } else if (operator === '*') {
+        resultNum = firstNum * secondNum;
+      } else if (operator === '/') {
+        resultNum = firstNum / secondNum;
+      }
+
+      resultElement.innerText = `result: ${resultNum}`;
+    }
+  }
+
+  document.querySelector('#calculateBtn').addEventListener('click', function() {
+    clickResultEvent();
+  })
+
+  
+
+</script>
+
+</html>

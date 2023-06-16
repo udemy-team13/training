@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+  <h1>My First Web Page</h1>
+  <p>My first paragraph.</p>
+
+  <p id="demo"></p>
+  <h1 id="hello"></h1>
+  <p class="full-name"></p>
+  <input id="testValue" type="text" onkeypress="onChange()">
+  <div id="innerHtml"></div>
+</head>
+<body>
+
+<script>
+  // 'use strict';
+
+  // document.getElementById('demo').innerHTML = 5 + 6;
+  // window.alert(5 + 6);
+  // console.log(5 + 6);
+  // let x = 5 + 5;
+  // let y = "5" + 5;
+  // let z = "Hello" + 5;
+
+  // console.log(x);
+  // console.log(y);
+  // console.log(z);
+
+  // Number
+  let length = 16;
+  let weight = 7.5;
+
+  // String
+  let color = "Yellow";
+  let lastName = "Johnson";
+  
+  // Boolean
+  let x = true;
+  let y = false;
+
+  // Object
+  const person = {
+    firstName: "John",
+    lastName: "Doe"
+  }
+
+  // Array
+  const car = ['Saab', 'Volvo', 'BMW'];
+
+  // Date
+  const date = new Date('2022-03-25');
+
+  // console.log(date);
+
+  const hello = document.getElementById('hello');
+
+  function myFunction(p1, p2) {
+    return p1 + p2;
+  }
+
+  let value = myFunction(15, 5);
+
+  hello.innerHTML = value;
+  
+  const myProfile = {
+    firstName: 'John',
+    lastName: 'Joe',
+    eyeColor: 'black',
+    hobby: 'game',
+    favFood: 'soup',
+    printName() {
+      return `${this.firstName} ${this.lastName}`;
+    }
+  }
+
+  ;
+
+  const fullName = document.querySelector('.full-name');
+  fullName.innerHTML = myProfile.printName();
+
+  // let text = 'ABCDEFG';
+  // let textLength = text.length;
+  // console.log(textLength);
+
+  // let text2 = 'Apple, Banana, Kiwi';
+  // let text2Part = text2.slice(7, 13);
+  // console.log('text2Part', text2Part);
+
+  // let text3 = 'Please visit MS';
+  // let newText = text3.replace('MS', 'W3School');
+  // console.log('newText', newText);
+
+  // let text1 = "Hello World!";
+  // let text2 = 'concat';
+  // let text1Uppercase = text1.toUpperCase();
+  // let text1Lowercase = text1.toLowerCase();
+  // let text1Concat = text1.concat(text2);
+  // console.log('text1Uppercase', text1Uppercase);
+  // console.log('text1Lowercase', text1Lowercase);
+  // console.log('text1Concat', text1Concat);
+
+  let text = "Please locate where 'locate' occurs!";
+  let lastIndex = text.lastIndexOf('John');
+  let index = text.indexOf('locate', 15);
+  // console.log('lastIndex', lastIndex);
+  // console.log('index', index);
+
+  let testValue = document.querySelector('#testValue');
+  // console.log(testValue);
+
+  let innerHtml = document.querySelector('#innerHtml');
+  innerHtml.innerHTML = '<div style="display: none;">test</div>';
+  // console.log(innerHtml.innerText);
+
+  // function add(a, b) {
+  //   return a+b;
+  // }
+
+  const ironMan = {
+    name: '토니스타크',
+    actor: '로버트 다우니 주니어',
+    alias: '아이언맨'
+  }
+
+  const {name, actor, alias} = ironMan;
+  console.log('name', name);
+  console.log('actor', actor);
+  console.log('alias', alias);
+  
+  const onChange = (event) => {
+    // const {target:{value}} = event;
+    console.log(event);
+  }
+  testValue.addEventListener('input', onChange);
+  
+
+
+
+
+  // let calculator = {
+  //   a: null,
+  //   b: null,
+  //   read() {
+  //     this.a = Number(window.prompt());
+  //     this.b = Number(window.prompt());
+  //   },
+  //   sum() {
+  //     return alert(this.a + this.b)
+  //   },
+  //   mul() {
+  //     return alert(this.a * this.b);
+  //   }
+  // }
+
+  // calculator.read();
+  // calculator.sum();
+  // calculator.mul();
+
+  // let calculator = {
+  //   sum() {
+  //     return this.a + this.b;
+  //   },
+
+  //   mul() {
+  //     return this.a * this.b;
+  //   },
+
+  //   read() {
+  //     this.a = +prompt('첫 번째 값:', 0);
+  //     this.b = +prompt('두 번째 값:', 0);
+  //   }
+  // }
+
+  // calculator.read();
+  // alert( calculator.sum() );
+  // alert( calculator.mul() );
+
+  // let ladder = {
+  //   step: 0,
+  //   up() {
+  //     this.step++;
+  //     return this;
+  //   },
+  //   down() {
+  //     this.step--;
+  //     return this;
+
+  //   },
+  //   showStep: function() {
+  //     alert(this.step);
+  //     return this;
+  //   }
+  // }
+
+  // ladder.up();
+  // ladder.up();
+  // ladder.up();
+  // ladder.down();
+  // ladder.showStep();
+
+  // ladder.up().up().up().down().showStep();
+
+  // function User(name) {
+  //   this.name = name;
+  //   this.isAdmin = false;
+  // }
+
+  // let user = new User('보라');
+
+  // console.log('user.name', user.name);
+  // console.log('user.isAdmin', user.isAdmin);
+
+    // let user2 = {
+    //   name: 'John',
+    //   age: 30,
+    // }
+
+    // let test = Object.entries(user2);
+    // console.log(test);
+
+
+</script>
+  
+</body>
+</html>
