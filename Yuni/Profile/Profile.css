@@ -1,3 +1,7 @@
+body {
+  font-family: "IBM Plex Sans KR", sans-serif;
+}
+
 .header {
   display: flex;
   height: 40px;
@@ -18,16 +22,18 @@
 
 .link {
   margin-top: 80px;
-  margin-bottom: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  color: MediumVioletRed;
-  padding: 14px;
-  font-size: 20px;
+  margin-bottom: 40px;
+  padding: 4px;
 }
 
-.link:hover {
-  color: MidnightBlue;
+.icon {
+  width: 48px;
+  height: 48px;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  transition: all 0.3s linear;
 }
 
 .myImage {
@@ -40,8 +46,13 @@
   text-align: center;
 }
 
+.detail {
+  margin-top: 14px;
+}
+
 .detail_lan {
   font-weight: bold;
+  margin-top: 24px;
 }
 
 .image_section {
@@ -49,21 +60,29 @@
 }
 
 .image_section1 {
+  display: flex;
   margin-left: -60px;
 }
 
 .image_section2 {
+  display: flex;
+
   margin-left: 60px;
 }
 
 .image {
   width: 200px;
   height: 200px;
-  padding: 10px;
+  overflow: hidden;
+  margin: 10px;
 }
 
 .image:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
+  transition: all 0.3s linear;
+}
+
+.image:not(:hover) {
   transition: all 0.3s linear;
 }
 
