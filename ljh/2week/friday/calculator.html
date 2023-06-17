@@ -1,0 +1,48 @@
+<html lang="ko">
+  ​
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  ​
+  <body>
+    <form name="MyForm" id="calc">
+      <p><input type="text" id="win" /></p>
+      <p>
+        <input type="button" value="1" onclick="cal('1')" />
+        <input type="button" value="2" onclick="cal('2')" />
+        <input type="button" value="3" onclick="cal('3')" />
+        <input type="button" value="4" onclick="cal('4')" />
+        <input type="button" value="5" onclick="cal('5')" />
+      </p>
+      <p>
+        <input type="button" value="6" onclick="cal('6')" />
+        <input type="button" value="7" onclick="cal('7')" />
+        <input type="button" value="8" onclick="cal('8')" />
+        <input type="button" value="9" onclick="cal('9')" />
+        <input type="button" value="0" onclick="cal('10')" />
+      </p>
+      <p>
+        <input type="button" value="/" onclick="cal('/')" />
+        <input type="button" value="*" onclick="cal('*')" />
+        <input type="button" value="-" onclick="cal('-')" />
+        <input type="button" value="+" onclick="cal('+')" />
+        <input type="button" value="=" onclick="answer()" />
+      </p>
+      <p>
+        <input type="reset" value="AC" />
+      </p>
+    </form>
+  </body>
+  <script>
+    function cal(num) {
+      MyForm.win.value += num;
+      console.log(num);
+    }
+
+    function answer() {
+      MyForm.win.value = eval(document.MyForm.win.value);
+    }
+  </script>
+</html>

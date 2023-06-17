@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        overflow: hidden;
+        width: 300px;
+      }
+
+      .wrapper {
+        display: flex;
+        width: 1500px;
+        transition: transform 0.5s;
+      }
+
+      .inner {
+        width: 300px;
+        height: 300px;
+        transition: all 0.5s;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="container">
+        <div class="wrapper">
+          <div class="inner">
+            <img src="../../safehomes/image/img_reserv01.png" alt="" />
+          </div>
+          <div class="inner">
+            <img src="../../safehomes/image/img_reserv02.png" alt="" />
+          </div>
+          <div class="inner">
+            <img src="../../safehomes/image/img_reserv03.png" alt="" />
+          </div>
+          <div class="inner">
+            <img src="../../safehomes/image/img_reserv04.png" alt="" />
+          </div>
+          <div class="inner">
+            <img src="../../safehomes/image/img_reserv05.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <button>이전</button>
+    <button>다음</button>
+    <script>
+      let num = 0;
+
+      document.querySelectorAll("button")[0].addEventListener("click", () => {
+        if (num < 0) {
+          num += 300;
+          console.log(num);
+          document.querySelector(
+            ".wrapper"
+          ).style.transform = `translateX(${num}px)`;
+        }
+      });
+
+      document.querySelectorAll("button")[1].addEventListener("click", () => {
+        if (num > -1200) {
+          num -= 300;
+          document.querySelector(
+            ".wrapper"
+          ).style.transform = `translateX(${num}px)`;
+        }
+      });
+    </script>
+  </body>
+</html>
