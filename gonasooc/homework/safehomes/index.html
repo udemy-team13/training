@@ -78,7 +78,7 @@
       <header class="safehomes-header">
         <div class="header-inner">
           <a href="./index.html" class="logo-link">
-            <img src="./assets/images/img/logo_safehomes.png" alt="safehomes logo">
+            <img src="./assets/images/img/logo_safehomes.png" alt="safehomes logo" class="img">
           </a>
           <div class="btn-grp">
             <button type="button" class="btn inquiry-btn">문의하기</button>
@@ -93,8 +93,12 @@
         <div class="page-container">
           <!-- visual-section -->
           <div class="visual-section">
+            <div class="visual-bg-wrap"></div>
             <h3 class="visual-ttl">내 집 보증금, <br />경매로 날아가면 어떻게 하지?</h3>
-            <a href="#" class="visual-link">지금 걱정 해결하기</a>
+            <a href="#" class="visual-link">
+              <span>지금 걱정 해결하기</span>
+              <img src="./assets/images/img/img_arrow_wh.svg" class="arrow-wh">
+            </a>
           </div>
           <!-- END visual-section -->
 
@@ -331,24 +335,35 @@
           <div class="review-section">
             <h3 class="section-title">세이프홈즈, <strong class="strong">없었으면 큰일 날 뻔했어요!</strong></h3>
             <!-- FIXME: 슬라이드 적용 예정 -->
-            <!-- review-card -->
-            <div class="review-card">
-              <div class="review-top-grp">
-                <div class="review-top-img-grp">
-                  <img src="./assets/images/img/img_reserv01.png" alt="profile image" class="img">
+            <div class="swiper-container main-slide-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- review-card -->
+                  <div class="review-card">
+                    <div class="review-top-grp">
+                      <div class="review-top-img-grp">
+                        <img src="./assets/images/img/img_reserv01.png" alt="profile image" class="img">
+                      </div>
+                      <div class="review-top-txt-grp">
+                        <p class="review-top-txt-01">홍길동님</p>
+                        <p class="review-top-txt-02">전/월세 보증금 지킴이 리포트</p>
+                      </div>
+                    </div>
+                    <div class="review-content-grp">
+                      <p class="review-content-txt">공인중개사가 계약을 너무 서두르는 느낌이 들어 불안했는데, 세이프홈즈를 통해서 리포트를 받아보니 아니나 다를까 위험요소가
+                        너무 큰
+                        매물이었습니다. 근저당이 너무 높게 잡혀있었고, 보증보험 적합 대상도 아니라 경매로 넘어가게 되면 보증금을 돌려받기 힘들 것 같아 해당 매물 계약을 포기하고, 더 안전한
+                        매물을
+                        찾아서 계약할 수 있었습니다.</p>
+                    </div>
+                  </div>
+                  <!-- END review-card -->
                 </div>
-                <div class="review-top-txt-grp">
-                  <p class="review-top-txt-01">홍길동님</p>
-                  <p class="review-top-txt-02">전/월세 보증금 지킴이 리포트</p>
-                </div>
-              </div>
-              <div class="review-content-grp">
-                <p class="review-content-txt">공인중개사가 계약을 너무 서두르는 느낌이 들어 불안했는데, 세이프홈즈를 통해서 리포트를 받아보니 아니나 다를까 위험요소가 너무 큰
-                  매물이었습니다. 근저당이 너무 높게 잡혀있었고, 보증보험 적합 대상도 아니라 경매로 넘어가게 되면 보증금을 돌려받기 힘들 것 같아 해당 매물 계약을 포기하고, 더 안전한 매물을
-                  찾아서 계약할 수 있었습니다.</p>
               </div>
             </div>
-            <!-- END review-card -->
+
+
+
             <div class="section-link-wrap">
               <a href="#" class="section-link">
                 <span>후기 진위여부 파악하러 가기</span>
@@ -405,27 +420,26 @@
     //   // disable: 'mobile',
     // });
 
-    // FIXME: swiper 주요 옵션: 사용 시 주석 해제, 미사용 시 삭제
-    // const swiper = new Swiper('.main-slide-swiper', {
-    //   slidesPerView: 'auto',
-    //   centeredSlides: true,
-    //   loop: true,
-    //   speed: 1000,
-    //   observeParents: true,
-    //   observer: true,
-    //   autoplay: {
-    //     delay: 2000,
-    //     disableOnInteraction: false,
-    //   },
-    //   pagination: {
-    //     el: '.swiper-pagination',
-    //     clickable: true,
-    //   },
-    //   navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    //   },
-    // });
+    const swiper = new Swiper('.main-slide-swiper', {
+      slidesPerView: 2.8,
+      centeredSlides: true,
+      loop: true,
+      speed: 1000,
+      observeParents: true,
+      observer: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      // pagination: {
+      //   el: '.swiper-pagination',
+      //   clickable: true,
+      // },
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      // },
+    });
   </script>
 </body>
 

@@ -12,7 +12,7 @@ body,
           box-sizing: border-box;
   font-size: 100%;
   font: inherit;
-  font-family: "helvatica", "noto", "spoqa", sans-serif;
+  font-family: "spoqa", sans-serif;
   letter-spacing: -0.04em;
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -69,130 +69,6 @@ img {
 }
 
 /* =================== fonts =================== */
-/* ---------- noto sans kr ---------- */
-@font-face {
-  font-family: "noto";
-  font-weight: 800;
-  src: url("../../fonts/notosanskr/NotoSansKR-Black.woff2") format("woff2"), url("../../fonts/notosanskr/NotoSansKR-Black.woff") format("woff"), url("../../fonts/notosanskr/NotoSansKR-Black.ttf") format("truetype"), url("../../fonts/notosanskr/NotoSansKR-Black.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "noto";
-  font-weight: 600;
-  src: url("../../fonts/notosanskr/NotoSansKR-Bold.woff2") format("woff2"), url("../../fonts/notosanskr/NotoSansKR-Bold.woff") format("woff"), url("../../fonts/notosanskr/NotoSansKR-Bold.ttf") format("truetype"), url("../../fonts/notosanskr/NotoSansKR-Bold.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "noto";
-  font-weight: 500;
-  src: url("../../fonts/notosanskr/NotoSansKR-Medium.woff2") format("woff2"), url("../../fonts/notosanskr/NotoSansKR-Medium.woff") format("woff"), url("../../fonts/notosanskr/NotoSansKR-Medium.ttf") format("truetype"), url("../../fonts/notosanskr/NotoSansKR-Medium.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "noto";
-  font-weight: 400;
-  src: url("../../fonts/notosanskr/NotoSansKR-Regular.woff2") format("woff2"), url("../../fonts/notosanskr/NotoSansKR-Regular.woff") format("woff"), url("../../fonts/notosanskr/NotoSansKR-Regular.ttf") format("truetype"), url("../../fonts/notosanskr/NotoSansKR-Regular.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "noto";
-  font-weight: 300;
-  src: url("../../fonts/notosanskr/NotoSansKR-Light.woff2") format("woff2"), url("../../fonts/notosanskr/NotoSansKR-Light.woff") format("woff"), url("../../fonts/notosanskr/NotoSansKR-Light.ttf") format("truetype"), url("../../fonts/notosanskr/NotoSansKR-Light.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "noto";
-  font-weight: 200;
-  src: url("../../fonts/notosanskr/NotoSansKR-DemiLight.woff2") format("woff2"), url("../../fonts/notosanskr/NotoSansKR-DemiLight.woff") format("woff"), url("../../fonts/notosanskr/NotoSansKR-DemiLight.ttf") format("truetype"), url("../../fonts/notosanskr/NotoSansKR-DemiLight.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "noto";
-  font-weight: 100;
-  src: url("../../fonts/notosanskr/NotoSansKR-Thin.woff2") format("woff2"), url("../../fonts/notosanskr/NotoSansKR-Thin.woff") format("woff"), url("../../fonts/notosanskr/NotoSansKR-Thin.ttf") format("truetype"), url("../../fonts/notosanskr/NotoSansKR-Thin.otf") format("opentype");
-  font-display: swap;
-}
-/* ---------- helvetica neue ---------- */
-@font-face {
-  font-family: "helvatica";
-  font-weight: 800;
-  src: url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Hv.woff2") format("woff2"), url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Hv.woff") format("woff"), url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Hv.ttf") format("truetype"), url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Hv.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "helvatica";
-  font-weight: 600;
-  src: url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Bd.woff2") format("woff2"), url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Bd.woff") format("woff"), url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Bd.ttf") format("truetype"), url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Bd.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "helvatica";
-  font-weight: 400;
-  src: url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Roman.woff2") format("woff2"), url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Roman.woff") format("woff"), url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Roman.ttf") format("truetype"), url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Roman.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "helvatica";
-  font-weight: 300;
-  src: url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Lt.woff2") format("woff2"), url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Lt.woff") format("woff"), url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Lt.ttf") format("truetype"), url("../../fonts/Helvetica_Neue/HelveticaNeueLTStd-Lt.otf") format("opentype");
-  font-display: swap;
-}
-/* ---------- open sans ---------- */
-@font-face {
-  font-family: "open sans";
-  font-weight: 800;
-  src: url("../../fonts/open_sans/OpenSans-ExtraBold.woff2") format("woff2"), url("../../fonts/open_sans/OpenSans-ExtraBold.woff") format("woff"), url("../../fonts/open_sans/OpenSans-ExtraBold.ttf") format("truetype"), url("../../fonts/open_sans/OpenSans-ExtraBold.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "open sans";
-  font-weight: 700;
-  src: url("../../fonts/open_sans/OpenSans-Bold.woff2") format("woff2"), url("../../fonts/open_sans/OpenSans-Bold.woff") format("woff"), url("../../fonts/open_sans/OpenSans-Bold.ttf") format("truetype"), url("../../fonts/open_sans/OpenSans-Bold.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "open sans";
-  font-weight: 600;
-  src: url("../../fonts/open_sans/OpenSans-SemiBold.woff2") format("woff2"), url("../../fonts/open_sans/OpenSans-SemiBold.woff") format("woff"), url("../../fonts/open_sans/OpenSans-SemiBold.ttf") format("truetype"), url("../../fonts/open_sans/OpenSans-SemiBold.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "open sans";
-  font-weight: 400;
-  src: url("../../fonts/open_sans/OpenSans-Regular.woff2") format("woff2"), url("../../fonts/open_sans/OpenSans-Regular.woff") format("woff"), url("../../fonts/open_sans/OpenSans-Regular.ttf") format("truetype"), url("../../fonts/open_sans/OpenSans-Regular.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "open sans";
-  font-weight: 300;
-  src: url("../../fonts/open_sans/OpenSans-Light.woff2") format("woff2"), url("../../fonts/open_sans/OpenSans-Light.woff") format("woff"), url("../../fonts/open_sans/OpenSans-Light.ttf") format("truetype"), url("../../fonts/open_sans/OpenSans-Light.otf") format("opentype");
-  font-display: swap;
-}
-/* ---------- nanum square ---------- */
-@font-face {
-  font-family: "nanum square";
-  font-weight: 800;
-  src: url("../../fonts/nanumsquare/NanumSquare_acEB.woff2") format("woff2"), url("../../fonts/nanumsquare/NanumSquare_acEB.woff") format("woff"), url("../../fonts/nanumsquare/NanumSquare_acEB.ttf") format("truetype"), url("../../fonts/nanumsquare/NanumSquare_acEB.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "nanum square";
-  font-weight: 600;
-  src: url("../../fonts/nanumsquare/NanumSquare_acB.woff2") format("woff2"), url("../../fonts/nanumsquare/NanumSquare_acB.woff") format("woff"), url("../../fonts/nanumsquare/NanumSquare_acB.ttf") format("truetype"), url("../../fonts/nanumsquare/NanumSquare_acB.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "nanum square";
-  font-weight: 400;
-  src: url("../../fonts/nanumsquare/NanumSquare_acR.woff2") format("woff2"), url("../../fonts/nanumsquare/NanumSquare_acR.woff") format("woff"), url("../../fonts/nanumsquare/NanumSquare_acR.ttf") format("truetype"), url("../../fonts/nanumsquare/NanumSquare_acR.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "nanum square";
-  font-weight: 300;
-  src: url("../../fonts/nanumsquare/NanumSquare_acL.woff2") format("woff2"), url("../../fonts/nanumsquare/NanumSquare_acL.woff") format("woff"), url("../../fonts/nanumsquare/NanumSquare_acL.ttf") format("truetype"), url("../../fonts/nanumsquare/NanumSquare_acL.otf") format("opentype");
-  font-display: swap;
-}
 /* ---------- spoqa han sans neo ---------- */
 @font-face {
   font-family: "spoqa";
@@ -223,138 +99,6 @@ img {
   font-weight: 100;
   src: url("../../fonts/SpoqaHanSansNeo/Spoqa_Han_Sans_Neo_Thin.woff2") format("woff2"), url("../../fonts/SpoqaHanSansNeo/Spoqa_Han_Sans_Neo_Thin.woff") format("woff"), url("../../fonts/SpoqaHanSansNeo/Spoqa_Han_Sans_Neo_Thin.ttf") format("truetype"), url("../../fonts/SpoqaHanSansNeo/Spoqa_Han_Sans_Neo_Thin.otf") format("opentype");
   font-display: swap;
-}
-/* ---------- poppins ---------- */
-@font-face {
-  font-family: "poppins";
-  font-weight: 900;
-  src: url("../../fonts/poppins/Poppins-Black.woff2") format("woff2"), url("../../fonts/poppins/Poppins-Black.woff") format("woff"), url("../../fonts/poppins/Poppins-Black.ttf") format("truetype"), url("../../fonts/poppins/Poppins-Black.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "poppins";
-  font-weight: 800;
-  src: url("../../fonts/poppins/Poppins-ExtraBold.woff2") format("woff2"), url("../../fonts/poppins/Poppins-ExtraBold.woff") format("woff"), url("../../fonts/poppins/Poppins-ExtraBold.ttf") format("truetype"), url("../../fonts/poppins/Poppins-ExtraBold.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "poppins";
-  font-weight: 700;
-  src: url("../../fonts/poppins/Poppins-Bold.woff2") format("woff2"), url("../../fonts/poppins/Poppins-Bold.woff") format("woff"), url("../../fonts/poppins/Poppins-Bold.ttf") format("truetype"), url("../../fonts/poppins/Poppins-Bold.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "poppins";
-  font-weight: 600;
-  src: url("../../fonts/poppins/Poppins-SemiBold.woff2") format("woff2"), url("../../fonts/poppins/Poppins-SemiBold.woff") format("woff"), url("../../fonts/poppins/Poppins-SemiBold.ttf") format("truetype"), url("../../fonts/poppins/Poppins-SemiBold.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "poppins";
-  font-weight: 500;
-  src: url("../../fonts/poppins/Poppins-Medium.woff2") format("woff2"), url("../../fonts/poppins/Poppins-Medium.woff") format("woff"), url("../../fonts/poppins/Poppins-Medium.ttf") format("truetype"), url("../../fonts/poppins/Poppins-Medium.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "poppins";
-  font-weight: 400;
-  src: url("../../fonts/poppins/Poppins-Regular.woff2") format("woff2"), url("../../fonts/poppins/Poppins-Regular.woff") format("woff"), url("../../fonts/poppins/Poppins-Regular.ttf") format("truetype"), url("../../fonts/poppins/Poppins-Regular.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "poppins";
-  font-weight: 300;
-  src: url("../../fonts/poppins/Poppins-Light.woff2") format("woff2"), url("../../fonts/poppins/Poppins-Light.woff") format("woff"), url("../../fonts/poppins/Poppins-Light.ttf") format("truetype"), url("../../fonts/poppins/Poppins-Light.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "poppins";
-  font-weight: 200;
-  src: url("../../fonts/poppins/Poppins-ExtraLight.woff2") format("woff2"), url("../../fonts/poppins/Poppins-ExtraLight.woff") format("woff"), url("../../fonts/poppins/Poppins-ExtraLight.ttf") format("truetype"), url("../../fonts/poppins/Poppins-ExtraLight.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "poppins";
-  font-weight: 100;
-  src: url("../../fonts/poppins/Poppins-Thin.woff2") format("woff2"), url("../../fonts/poppins/Poppins-Thin.woff") format("woff"), url("../../fonts/poppins/Poppins-Thin.ttf") format("truetype"), url("../../fonts/poppins/Poppins-Thin.otf") format("opentype");
-  font-display: swap;
-}
-/* ---------- roboto ---------- */
-@font-face {
-  font-family: "roboto";
-  font-weight: 300;
-  src: url("../../fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("../../fonts/roboto/Roboto-Thin.woff") format("woff"), url("../../fonts/roboto/Roboto-Thin.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Thin.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "roboto";
-  font-weight: 400;
-  src: url("../../fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("../../fonts/roboto/Roboto-Regular.woff") format("woff"), url("../../fonts/roboto/Roboto-Regular.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Regular.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "roboto";
-  font-weight: 500;
-  src: url("../../fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("../../fonts/roboto/Roboto-Medium.woff") format("woff"), url("../../fonts/roboto/Roboto-Medium.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Medium.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "roboto";
-  font-weight: 600;
-  src: url("../../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../../fonts/roboto/Roboto-Bold.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Bold.otf") format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "roboto";
-  font-weight: 800;
-  src: url("../../fonts/roboto/Roboto-Black.woff2") format("woff2"), url("../../fonts/roboto/Roboto-Black.woff") format("woff"), url("../../fonts/roboto/Roboto-Black.ttf") format("truetype"), url("../../fonts/roboto/Roboto-Black.otf") format("opentype");
-  font-display: swap;
-}
-/* ---------- pretendard ---------- */
-@font-face {
-  font-family: "pretendard";
-  font-weight: 100;
-  src: url("../../fonts/pretendard/Pretendard-Thin.woff2") format("woff2"), url("../../fonts/pretendard/Pretendard-Thin.woff") format("woff"), url("../../fonts/pretendard/Pretendard-Thin.otf") format("opentype");
-}
-@font-face {
-  font-family: "pretendard";
-  font-weight: 200;
-  src: url("../../fonts/pretendard/Pretendard-ExtraLight.woff2") format("woff2"), url("../../fonts/pretendard/Pretendard-ExtraLight.woff") format("woff"), url("../../fonts/pretendard/Pretendard-ExtraLight.otf") format("opentype");
-}
-@font-face {
-  font-family: "pretendard";
-  font-weight: 300;
-  src: url("../../fonts/pretendard/Pretendard-Light.woff2") format("woff2"), url("../../fonts/pretendard/Pretendard-Light.woff") format("woff"), url("../../fonts/pretendard/Pretendard-Light.otf") format("opentype");
-}
-@font-face {
-  font-family: "pretendard";
-  font-weight: 400;
-  src: url("../../fonts/pretendard/Pretendard-Regular.woff2") format("woff2"), url("../../fonts/pretendard/Pretendard-Regular.woff") format("woff"), url("../../fonts/pretendard/Pretendard-Regular.otf") format("opentype");
-}
-@font-face {
-  font-family: "pretendard";
-  font-weight: 500;
-  src: url("../../fonts/pretendard/Pretendard-Medium.woff2") format("woff2"), url("../../fonts/pretendard/Pretendard-Medium.woff") format("woff"), url("../../fonts/pretendard/Pretendard-Medium.otf") format("opentype");
-}
-@font-face {
-  font-family: "pretendard";
-  font-weight: 600;
-  src: url("../../fonts/pretendard/Pretendard-SemiBold.woff2") format("woff2"), url("../../fonts/pretendard/Pretendard-SemiBold.woff") format("woff"), url("../../fonts/pretendard/Pretendard-SemiBold.otf") format("opentype");
-}
-@font-face {
-  font-family: "pretendard";
-  font-weight: 700;
-  src: url("../../fonts/pretendard/Pretendard-Bold.woff2") format("woff2"), url("../../fonts/pretendard/Pretendard-Bold.woff") format("woff"), url("../../fonts/pretendard/Pretendard-Bold.otf") format("opentype");
-}
-@font-face {
-  font-family: "pretendard";
-  font-weight: 800;
-  src: url("../../fonts/pretendard/Pretendard-ExtraBold.woff2") format("woff2"), url("../../fonts/pretendard/Pretendard-ExtraBold.woff") format("woff"), url("../../fonts/pretendard/Pretendard-ExtraBold.otf") format("opentype");
-}
-@font-face {
-  font-family: "pretendard";
-  font-weight: 900;
-  src: url("../../fonts/pretendard/Pretendard-Black.woff2") format("woff2"), url("../../fonts/pretendard/Pretendard-Black.woff") format("woff"), url("../../fonts/pretendard/Pretendard-Black.otf") format("opentype");
 }
 /* =================== helper =================== */
 .is-none {
@@ -845,6 +589,90 @@ html.ie .scroll-custom {
 }
 
 /* =================== main =================== */
+.safehomes-landing-page .section-title {
+  font-size: 48px;
+  font-weight: 500;
+  color: #0E7159;
+  margin-bottom: 50px;
+  text-align: center;
+}
+@media all and (max-width: 600px) {
+  .safehomes-landing-page .section-title {
+    font-size: 21px;
+    margin-bottom: 40px;
+  }
+}
+.safehomes-landing-page .section-title .strong {
+  font-weight: 600;
+}
+.safehomes-landing-page .section-list-wrap .section-list-grp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 48px;
+}
+@media all and (max-width: 600px) {
+  .safehomes-landing-page .section-list-wrap .section-list-grp {
+    display: block;
+  }
+}
+.safehomes-landing-page .section-list-wrap .section-list {
+  width: calc((100% - 96px) / 3);
+}
+@media all and (max-width: 600px) {
+  .safehomes-landing-page .section-list-wrap .section-list {
+    width: 100%;
+  }
+}
+.safehomes-landing-page .section-list-wrap .section-list .list-img-wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 233px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.safehomes-landing-page .section-list-wrap .section-list .list-img-wrap .img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.safehomes-landing-page .section-list-wrap .section-list .list-txt-wrap .list-txt-ttl {
+  font-size: 21px;
+  font-weight: 600;
+  color: #333D4B;
+  margin-bottom: 16px;
+}
+.safehomes-landing-page .section-list-wrap .section-list .list-txt-wrap .list-txt-dec {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6B7684;
+}
+.safehomes-landing-page .section-link-wrap {
+  margin: 0 auto;
+}
+.safehomes-landing-page .section-link-wrap .section-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  color: #0E7159;
+  font-weight: 600;
+  gap: 7px;
+  margin-top: 25px;
+}
 .safehomes-landing-page .l-center {
   max-width: 1080px;
   width: 95%;
@@ -853,10 +681,231 @@ html.ie .scroll-custom {
 }
 
 .safehomes-header .header-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 1110px;
   width: 95%;
   margin: 0 auto;
   padding: 0 16px;
+}
+.safehomes-header .logo-link {
+  display: block;
+  width: 195px;
+  height: 32px;
+}
+.safehomes-header .logo-link .img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.safehomes-header .btn-grp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.safehomes-header .btn-grp .btn {
+  width: 90px;
+  height: 30px;
+  font-size: 12px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+.safehomes-header .btn-grp .inquiry-btn {
+  color: #333D4B;
+  background-color: #fff;
+}
+.safehomes-header .btn-grp .start-btn {
+  background-color: #0E7159;
+  color: #fff;
+}
+
+.safehomes-main .visual-section {
+  position: relative;
+  padding: 265px 0;
+}
+.safehomes-main .visual-section .visual-bg-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../assets/images/img/bg_main_section.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-filter: brightness(25%);
+          filter: brightness(25%);
+}
+.safehomes-main .visual-section .visual-ttl {
+  position: relative;
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 43px;
+}
+.safehomes-main .visual-section .visual-link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+.safehomes-main .list01-section {
+  padding-top: 124px;
+  padding-bottom: 65px;
+}
+.safehomes-main .list-another-section {
+  padding-top: 124px;
+  padding-bottom: 78px;
+}
+.safehomes-main .section-another-list-wrap .section-another-list-grp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 48px;
+}
+@media all and (max-width: 600px) {
+  .safehomes-main .section-another-list-wrap .section-another-list-grp {
+    display: block;
+  }
+}
+.safehomes-main .section-another-list-wrap .section-another-list {
+  width: calc((100% - 96px) / 3);
+}
+@media all and (max-width: 600px) {
+  .safehomes-main .section-another-list-wrap .section-another-list {
+    width: 100%;
+  }
+}
+.safehomes-main .section-another-list-wrap .list-another-txt-no {
+  font-size: 21px;
+  font-weight: 400;
+  color: #0E7159;
+  margin-bottom: 8px;
+}
+.safehomes-main .section-another-list-wrap .list-another-txt-no::before {
+  content: "#";
+}
+.safehomes-main .section-another-list-wrap .list-another-txt-ttl {
+  font-size: 21px;
+  font-weight: 600;
+  color: #333D4B;
+  margin-bottom: 14px;
+}
+.safehomes-main .section-another-list-wrap .list-another-txt-dec {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6B7684;
+}
+.safehomes-main .phone-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.safehomes-main .phone-section.phone02-section .l-center {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+@media all and (max-width: 600px) {
+  .safehomes-main .phone-section.phone02-section .l-center {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.safehomes-main .phone-section .l-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media all and (max-width: 600px) {
+  .safehomes-main .phone-section .l-center {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.safehomes-main .phone-section .phone-img-wrap {
+  width: 50%;
+}
+@media all and (max-width: 600px) {
+  .safehomes-main .phone-section .phone-img-wrap {
+    width: 100%;
+  }
+}
+.safehomes-main .phone-section .phone-img-wrap .img {
+  width: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media all and (max-width: 600px) {
+  .safehomes-main .phone-section .phone-img-wrap .img {
+    width: 100%;
+  }
+}
+.safehomes-main .phone-section .phone-txt-wrap {
+  width: 50%;
+}
+@media all and (max-width: 600px) {
+  .safehomes-main .phone-section .phone-txt-wrap {
+    width: 100%;
+  }
+}
+.safehomes-main .phone-section .phone-txt-wrap .phone-txt-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0E7159;
+}
+.safehomes-main .phone-section .phone-txt-wrap .phone-txt-main-dec {
+  font-size: 48px;
+  font-weight: 600;
+  color: #333D4B;
+}
+.safehomes-main .phone-section .phone-txt-wrap .phone-txt-sub-dec {
+  font-size: 24px;
+  font-weight: 500;
+  color: #6B7684;
 }
 
 .safehomes-footer .footer-inner {
