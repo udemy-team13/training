@@ -177,6 +177,10 @@
         align-items: center;
       }
 
+      .price-inner {
+        display: flex;
+      }
+
       .price-info {
         background-color: #f2f3f4;
         padding: 0 0 1rem 1rem;
@@ -206,6 +210,7 @@
 
       .comment-wrapper {
         display: flex;
+        width: 1920px;
         margin-bottom: 3rem;
         overflow: hidden;
       }
@@ -231,6 +236,82 @@
 
       .comment-box p {
         font-weight: 300;
+      }
+
+      @media screen and (max-width: 1024px) {
+        html,
+        body {
+          font-size: small;
+          width: 100%;
+        }
+        .main-image-wrapper,
+        .main-description-box,
+        .price-inner {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .phone-img-wrapper {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+        .middle {
+          flex-direction: column !important;
+        }
+        .comment-wrapper {
+          overflow: hidden;
+          width: 1024px;
+        }
+        .last-section {
+          width: 1024px !important;
+        }
+        article,
+        header {
+          width: 1024px;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        main {
+          width: 1024px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        html,
+        body {
+          width: 100%;
+          /* overflow-x: hidden; */
+        }
+        .main-image-wrapper,
+        .main-description-box,
+        .price-inner {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .phone-img-wrapper {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+        .middle {
+          flex-direction: column !important;
+        }
+        .comment-wrapper {
+          overflow: hidden;
+          width: 768px;
+        }
+        .last-section {
+          width: 768px !important;
+        }
+        article,
+        header {
+          width: 768px;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        main {
+          width: 768px;
+        }
       }
     </style>
   </head>
@@ -421,7 +502,11 @@
             </p>
           </div>
         </div>
-        <div class="phone-img-wrapper">
+        <div
+          style="flex-direction: row-reverse"
+          class="phone-img-wrapper middle"
+        >
+          <img src="./image/img_phone02.png" alt="" />
           <div style="width: 300px">
             <h3>절차</h3>
             <h2>보증금 보호를 위한,<br />체크리스트</h2>
@@ -430,7 +515,6 @@
               제공합니다.
             </p>
           </div>
-          <img src="./image/img_phone02.png" alt="" />
         </div>
         <div class="phone-img-wrapper">
           <img src="./image/img_phone03.png" alt="" />
@@ -460,7 +544,7 @@
           <span style="font-weight: 400">세이프홈즈,</span> 서비스 가격은 어떻게
           될까요?
         </h2>
-        <div style="display: flex">
+        <div class="price-inner">
           <div class="price-info">
             <h3>전/월세 보증금<br />지킴이 리포트</h3>
             <p>
@@ -590,6 +674,7 @@
       </div>
     </main>
     <div
+      class="last-section"
       style="
         display: flex;
         flex-direction: column;

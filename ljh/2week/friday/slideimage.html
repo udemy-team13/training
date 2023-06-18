@@ -19,7 +19,6 @@
       .inner {
         width: 300px;
         height: 300px;
-        transition: all 0.5s;
       }
 
       img {
@@ -29,24 +28,22 @@
     </style>
   </head>
   <body>
-    <div>
-      <div class="container">
-        <div class="wrapper">
-          <div class="inner">
-            <img src="../../safehomes/image/img_reserv01.png" alt="" />
-          </div>
-          <div class="inner">
-            <img src="../../safehomes/image/img_reserv02.png" alt="" />
-          </div>
-          <div class="inner">
-            <img src="../../safehomes/image/img_reserv03.png" alt="" />
-          </div>
-          <div class="inner">
-            <img src="../../safehomes/image/img_reserv04.png" alt="" />
-          </div>
-          <div class="inner">
-            <img src="../../safehomes/image/img_reserv05.png" alt="" />
-          </div>
+    <div class="container">
+      <div class="wrapper">
+        <div class="inner">
+          <img src="../../safehomes/image/img_reserv01.png" alt="" />
+        </div>
+        <div class="inner">
+          <img src="../../safehomes/image/img_reserv02.png" alt="" />
+        </div>
+        <div class="inner">
+          <img src="../../safehomes/image/img_reserv03.png" alt="" />
+        </div>
+        <div class="inner">
+          <img src="../../safehomes/image/img_reserv04.png" alt="" />
+        </div>
+        <div class="inner">
+          <img src="../../safehomes/image/img_reserv05.png" alt="" />
         </div>
       </div>
     </div>
@@ -58,7 +55,6 @@
       document.querySelectorAll("button")[0].addEventListener("click", () => {
         if (num < 0) {
           num += 300;
-          console.log(num);
           document.querySelector(
             ".wrapper"
           ).style.transform = `translateX(${num}px)`;
