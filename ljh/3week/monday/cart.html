@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 3rem;
+      }
+
+      .product {
+        padding-left: 1rem;
+        margin: 1rem;
+        width: 15rem;
+        height: 10rem;
+        border: 2px solid gray;
+        border-radius: 5px;
+      }
+
+      .product > button {
+        border: none;
+        width: 8rem;
+        height: 2rem;
+        border-radius: 5px;
+        background-color: aquamarine;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="product">
+        <h3>사과</h3>
+        <p>10,000 ₩</p>
+        <br /><button onclick="addCart(event)">장바구니 추가</button>
+      </div>
+      <div class="product">
+        <h3>바나나</h3>
+        <p>8,000 ₩</p>
+        <br /><button onclick="addCart(event)">장바구니 추가</button>
+      </div>
+      <div class="product">
+        <h3>수박</h3>
+        <p>12,000 ₩</p>
+        <br /><button onclick="addCart(event)">장바구니 추가</button>
+      </div>
+      <div class="product">
+        <h3>망고</h3>
+        <p>15,000 ₩</p>
+        <br /><button onclick="addCart(event)">장바구니 추가</button>
+      </div>
+    </div>
+    <ul></ul>
+    <h1></h1>
+    <script>
+      function addCart(event) {
+        const parent = event.target.parentNode;
+        const childsName = parent.children[0].textContent;
+        const childsPrice = parent.children[1].textContent;
+        const list = document.createElement("li");
+
+        list.innerText = `${childsName} : ${childsPrice}`;
+        document.querySelector("ul").append(list);
+      }
+    </script>
+  </body>
+</html>

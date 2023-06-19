@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text {
+        margin-bottom: 2rem;
+      }
+      .wrapper {
+      }
+
+      .inner {
+        border: 2px solid gray;
+        border-radius: 5px;
+      }
+      h2,
+      p {
+        margin-left: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text">
+      <input
+        class="title"
+        type="text"
+        placeholder="제목"
+        onchange="handleBoard(event)"
+      />
+      <input
+        class="detail"
+        type="text"
+        placeholder="내용"
+        onchange="handleBoard(event)"
+      />
+      <button class="btn" type="submit" onclick="handleBoard(event)">
+        글발행
+      </button>
+    </div>
+    <div class="wrapper">
+      <div class="inner">
+        <h2>첫번째 글~</h2>
+        <p>안녕하세요</p>
+      </div>
+    </div>
+    <script>
+      // function handleBoard() {
+
+      // }
+      document.querySelector(
+        "wrapper"
+      ).innerHTML = `<div class="inner">asdasd</div>`;
+      // function handleBoard(event) {
+      //   if (event.target.className === "title") {
+      //     const title = document.createElement("h1");
+      //     h1.innerText = `${event.target.value}`;
+      //   } else if (event.target.className === "detail") {
+      //     const detail = document.createElement("p");
+      //     p.innerText = `${event.target.value}`;
+      //   } else {
+      //     return console.log(true);
+      //   }
+      //   console.log(title, detail);
+      // }
+
+      // const parent = event.target.parentNode;
+      // const childsName = parent.children[0].textContent;
+      // const childsPrice = parent.children[1].textContent;
+      // const list = document.createElement("li");
+
+      // list.innerText = `${childsName} : ${childsPrice}`;
+      // document.querySelector("ul").append(list);
+    </script>
+  </body>
+</html>
