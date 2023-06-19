@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <img src="../../safehomes/image/img_reserv01.png" alt="" id="img" />
+    </div>
+    <script>
+      const url = [
+        "../../safehomes/image/img_reserv01.png",
+        "../../safehomes/image/img_reserv02.png",
+        "../../safehomes/image/img_reserv03.png",
+        "../../safehomes/image/img_reserv04.png",
+        "../../safehomes/image/img_reserv05.png",
+      ];
+
+      document.getElementById("img").addEventListener("click", () => {
+        document.querySelector("img").src =
+          url[Math.floor(url.length * Math.random())];
+      });
+    </script>
+  </body>
+</html>
