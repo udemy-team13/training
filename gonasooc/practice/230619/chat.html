@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>채팅</title>
+</head>
+<body>
+  <div class="chat-wrap">
+    <div class="chat-log-wrap">
+      <div class="chat-log-grp">
+        <div style="margin-bottom: 10px;">안녕하세요! 채팅이 시작되었습니다! 메세지를 입력하세요~!</div>
+      </div>
+    </div>
+    <div class="chat-input-wrap">
+      <input type="text" placeholder="유저아이디" id="userId">
+      <input type="text" placeholder="메세지" id="userMsg">
+      <button type="button" id="sendBtn">전송</button>
+    </div>
+  </div>
+</body>
+
+<script>
+const userId = document.querySelector('#userId');
+const userMsg = document.querySelector('#userMsg');
+const chatLogGrp = document.querySelector('.chat-log-grp');
+const sendBtn = document.querySelector('#sendBtn');
+
+function sendMsg() {
+  if(userId.value && userMsg.value) {
+    let $div = document.createElement('div');
+    console.log($div);
+    $div.innerHTML = `<span style="font-weight: 600;">${userId.value}</span>: <span>${userMsg.value}</span>`;
+    chatLogGrp.append($div);
+    userMsg.value = '';
+  } else {
+    alert('아이디와 메세지를 입력해주세요');
+  }
+}
+
+// 전송 버튼 눌렀을 때
+sendBtn.addEventListener('click', () => {
+  sendMsg();
+});
+
+userId.addEventListener('keypress', (e) => {
+  if(e.key === 'Enter') {
+    sendMsg();
+  }
+})
+
+userMsg.addEventListener('keypress', (e) => {
+  if(e.key === 'Enter') {
+    sendMsg();
+  }
+})
+</script>
+
+<style>
+  .chat-wrap {
+    height: 80vh;
+    max-width: 560px;
+    margin: 0 auto;
+    border: 3px solid #000;
+  }
+
+  .chat-log-wrap {
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .chat-log-grp {
+    overflow: scroll;
+  }
+
+  .chat-input-wrap {
+    height: 5%;
+    border: 1px solid #000;
+  }
+</style>
+</html>
