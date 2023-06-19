@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>장바구니</title>
+</head>
+<body>
+  <!-- 메뉴판 -->
+  <div id="menu" style="display: flex; justify-content: flex-start;">
+    <div style="border: 1px solid #000; padding: 10px;">
+      <h3>사과</h3>
+      <p>1000원</p>
+      <button class="add-btn" type="button" onclick="addCart(event)">장바구니에 추가</button>
+    </div>
+    <div style="border: 1px solid #000; padding: 10px;">
+      <h3>바나나</h3>
+      <p>1500원</p>
+      <button class="add-btn" type="button" onclick="addCart(event)">장바구니에 추가</button>
+    </div>
+  </div>
+  <!-- 장바구니 -->
+  <div>
+    <h3>장바구니</h3>
+    <ul class="cart-ul">
+    </ul>
+  </div>
+</body>
+
+<script>
+  // 버튼을 querySelectorAll로 담았을 때 로직
+  // const addBtn = document.querySelectorAll('.add-btn');
+  // console.log(addBtn);
+  // for(let i = 0; i < addBtn.length; i++) {
+  //   console.log(addBtn[i])
+  // }
+
+  const cartUl = document.querySelector('.cart-ul');
+
+  function addCart(event) {
+    let li = document.createElement('li');
+    li.textContent = `${event.target.previousElementSibling.previousElementSibling.innerText} - ${event.target.previousElementSibling.innerText}`;
+    cartUl.append(li);
+  }
+
+
+</script>
+
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습</title>
+</head>
+<body>
+  <!-- <h1 id="greeting">hello</h1>
+  <button id="btn" type="button">클릭!!</button>
+  <input id="hello" type="text" onchange="onChange"> -->
+  <p id="demo"></p>
+</body>
+
+<script>
+  // function myDisplayer(values) {
+  //   document.getElementById('demo').innerHTML = values;
+  // }
+
+  // function Person(firstName, lastName = 'Choi', age, hobby = '') {
+  //   this.firstName = firstName;
+  //   this.lastName = lastName;
+  //   this.age = age;
+  //   this.hobby = hobby;
+  // }
+
+  // const myFather = new Person('Jinha', 'Choi', 10);
+  // const myMother = new Person('Geumja', 'Choi', 20);
+  // const myBrother = new Person('Joel', undefined, 30);
+
+  // console.log(myBrother);
+
+  // let arr = [10, 20, 30, 40, 50];
+  // arr.forEach((e) => {
+  //   console.log(e);
+  // });
+
+  // const numbers = [1, 2, 3, 4, 5];
+  // const squardNum = numbers.map((x) => {
+  //   return x * 2;
+  // })
+
+  // console.log(squardNum);
+
+  // let day = new Date();
+  // console.log(day.getDay());
+  // switch (day.getDay()) {
+  //   case 0:
+  //     document.write('일요일입니다.');
+  //     break;
+  //   case 1:
+  //     document.write('월요일입니다.');
+  //     break;
+  //   case 2:
+  //     document.write('화요일입니다.');
+  //     break;
+  //   case 3:
+  //     document.write('수요일입니다.');
+  //     break;
+  //   case 4:
+  //     document.write('목요일입니다.');
+  //     break;
+  //   case 5:
+  //     document.write('금요일입니다.');
+  //     break;
+  //   case 6:
+  //     document.write('토요일입니다.');
+  //     break;
+  // }
+
+  // console.log(day);
+
+  // let x = 3;
+  // x === 4 ? document.write('true') : document.write('false');
+
+  // let score = 69;
+  // let money = 0;
+
+  // if(score < 90) {
+  //   document.write('참 잘했다..', '<br>');
+  //   money += 10000;
+  // } else if(score > 80) {
+  //   document.write('걍 잘했다..', '<br>');
+  //   money += 5000;
+  // } else if(score > 70) {
+  //   document.write('잘했다..', '<br>');
+  //   money += 1000;
+  // } else {
+  //   money += 0;
+  // }
+  // document.write(money);
+
+  // let txt = 'ABCDF';
+  // document.write(txt.includes('ABC'));
+  // document.write(txt.startsWith('ABCD'));
+  // document.write(txt.startsWith('A'));
+  // document.write(txt.endsWith('A'));
+
+  // function arrToStr(arr) {
+  //   let str = '';
+  //   for(let i = 0; i < arr.length; i++) {
+  //     str += arr[i];
+  //   }
+  //   console.log(str);
+  // }
+
+  // arrToStr(['Hello', ' ', 'World', '!']);
+
+  // let txt = 'DAKDFASLKDFJALFALKFKLA';
+  // document.write(`${txt}`, '<br>');
+  // document.write(`${txt.indexOf('F')}`, '<br>')
+  // document.write(`${txt.lastIndexOf('A')}`, '<br>')
+
+  // let fruit = ['사과', '수박', '복숭아', '딸기', '바나나'];
+  // document.write(`과일 : ${fruit}`, '<br>');
+
+  // let pop_fruit = fruit.pop(); // 변수에 담으면 빠진 게 담김
+  // document.write(`과일 pop : ${pop_fruit}`);
+  // document.write(`과일 : ${fruit}`, '<br>');
+
+  // document.write(`과일 push : ${fruit.push(pop_fruit)}`, '<br>');
+  // document.write(`과일 : ${fruit}`, '<br>');
+
+  
+
+
+  // let person = {
+  //   name: '정동훈',
+  //   age: 23,
+  //   height: 180,
+  //   weight: 68,
+  //   career: {
+  //     첫번째직장: '군대',
+  //     두번째직장: '세이프홈즈'
+  //   }
+  // }
+  
+  // person.belong = '세이프홈즈';
+
+  // document.write(`제 이름은 ${person.name}입니다`)
+  // document.write(`제 나이는 ${person.age}입니다`)
+  // document.write(`제 이름은 ${person['name']}입니다`)
+
+  // function sum(x, y, c) {
+  //   c(x + y);
+  //   return x + y;
+  // }
+
+  // function documentWrite(s) {
+  //   document.write('콜백함수', s);
+  // }
+
+  // sum(10, 20, documentWrite);
+
+  // function circleWidth(r) {
+  //   let width = r * r * 3.14;
+  //   return width;
+  // }
+
+  // document.write(circleWidth(10));
+
+  // function test(e) {
+  //   console.log(e.target);
+  //   document.write('hello world');
+  // }
+
+  // const btn = document.getElementById('btn');
+  // const hello = document.getElementById('hello');
+
+  // function startCon() {
+  //   console.log('it works!');
+  // }
+
+  // btn.addEventListener('click', startCon);
+  // hello.onchange = function () {
+  //   let hello1 = hello.value;
+  //   console.log(hello1);
+  // }
+
+
+  // let name = '홍길동';
+  // let age = 25;
+
+  // document.write(name);
+  // document.write(age);
+
+  // // console.log(name);
+  // // console.log(age);
+
+  // document.getElementById('greeting').innerText = '하이';
+
+  // let a = 20;
+  // let b = 10;
+  // let c = 2;
+  // document.write('<br>');
+
+  // document.write(`a === ${a}`);
+  // document.write('<br>');
+  // document.write(`b === ${b}`);
+  // document.write('<br>');
+  // document.write(`c === ${c}`);
+  // document.write('<br>');
+  
+  // const name2 = '홍길동';
+  // const belong = 'udemy x 스나이퍼팩토리';
+  // document.write(name2, '<br>');
+  // document.write(belong, '<br>');
+  // document.write(belong[2], '<br>');
+  // document.write(belong[3], '<br>');
+
+  // // let name3 = prompt('이름 입력하세요');
+  // // let age3 = prompt('나이 입력하세요');
+
+  // let x, y, z;
+  // x = 10;
+  // y = 20;
+  // z = '10';
+
+  // document.write(`x > y : ${x > y}`, '<br>');
+  // document.write(`x < y : ${x < y}`, '<br>');
+  // document.write(`x >= y : ${x >= y}`, '<br>');
+  // document.write(`x <= y : ${x <= y}`, '<br>');
+
+  // let aa = 4;
+  // let bb = 20;
+  
+  // Q1
+  // if(aa > 3 && bb < 5) {
+  //   document.write(`aa + bb = ${aa + bb}`);
+  // } else {
+  //   document.write(`aa * bb = ${aa * bb}`);
+  // }
+  // document.write('<br>');
+  // // Q2
+  // if(aa === 4 || a === 10) {
+  //   document.write(`aa * bb = ${aa * bb}`);
+  // }
+  // document.write('<br>');
+  // // Q3
+  // if(aa === 4 && b === 20) {
+  //   document.write(`aa * bb = ${aa * bb}`);
+  // } else {
+  //   document.write(`aa % bb = ${aa % bb}`);
+  // }
+
+</script>
+</html>
