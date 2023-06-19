@@ -29,7 +29,6 @@ const sendBtn = document.querySelector('#sendBtn');
 function sendMsg() {
   if(userId.value && userMsg.value) {
     let $div = document.createElement('div');
-    console.log($div);
     $div.innerHTML = `<span style="font-weight: 600;">${userId.value}</span>: <span>${userMsg.value}</span>`;
     chatLogGrp.append($div);
     userMsg.value = '';

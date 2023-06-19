@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>todo</title>
+</head>
+<body>
+  <div style="max-width: 600px; margin: 0 auto;">
+    <div style="margin-bottom: 10px;">
+      <input type="text" id="todoInput">
+      <button type="button" id="addBtn">추가</button>
+    </div>
+    <div class="todoList"></div>
+  </div>
+</body>
+
+<script>
+  const todoInput = document.querySelector('#todoInput');
+  const todoList = document.querySelector('.todoList');
+  const addBtn = document.querySelector('#addBtn');
+  
+  function addTodo() {
+    if(todoInput.value) {
+      let $div = document.createElement('div');
+      $div.innerHTML = `<div style="display: flex; justify-content: space-between; align-items: flex-start; border: 1px solid rgba(0, 0, 0, .2); box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.52); padding: 10px; margin-bottom: 10px;">
+        <span>${todoInput.value}</span>
+        <button class="del-btn" type="button" style="flex-shrink: 0;">삭제</button>
+      </div>`;
+      todoList.append($div);
+      todoInput.value = ''; // 인풋 초기화
+      const delBtn = document.querySelectorAll('.del-btn');
+      for(let i = 0; i < delBtn.length; i++) {
+        delBtn[i].addEventListener('click', (event) => {
+          const li = event.target.parentElement;
+          li.remove();
+        })
+      }
+    } else {
+      alert('할일을 입력해주세요')
+    }
+  }
+
+  addBtn.addEventListener('click', () => {
+    addTodo();
+  });
+</script>
+
+</html>
