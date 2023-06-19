@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .chats{
+            height:100px;
+            overflow:scroll;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="chats"></div>
+        <input class="name" type="text" placeholder="사용자명"/>
+        <input class="message" type="text" placeholder="메시지를 입력하세요"/>
+        <button class="send">전송</button>
+    <script>
+        var userName = document.getElementsByClassName('name')[0];
+        var message = document.getElementsByClassName('message')[0];
+        var chats = document.getElementsByClassName('chats')[0];
+        var butt = document.getElementsByClassName('send')[0];
+
+        butt.addEventListener('click',()=>{
+            var chat = document.createElement('div');
+            chat.innerHTML = `<b>${userName.value}:</b> ${message.value}`;
+            chats.appendChild(chat);
+            userName.value="";
+            message.value="";
+        })
+
+
+    </script>
+</body>
+</html>

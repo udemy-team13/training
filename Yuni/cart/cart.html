@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart 👛</title>
+</head>
+
+<body>
+  <div class="product">
+    <h3>사과</h3>
+    <div>3,000원</div>
+    <button onclick="addCard(event)">장바구니 추가</button>
+  </div>
+  <div class="product">
+    <h3>바나나</h3>
+    <div>5,000원</div>
+    <button onclick="addCard(event)">장바구니 추가</button>
+  </div>
+  <div class="product">
+    <h3>메론</h3>
+    <div>8,000원</div>
+    <button onclick="addCard(event)">장바구니 추가</button>
+  </div>
+  <ul></ul>
+</body>
+<script>
+  function addCard(event) {
+    const parent = event.target.parentNode;
+    const getProduct = parent.children[0].innerText
+    const getPrice = parent.children[1].innerText
+
+    const addList = document.querySelector('ul');
+    const listItem = document.createElement('li');
+    listItem.textContent = getProduct + ' ' + getPrice;
+    addList.append(listItem);
+  }
+</script>
+
+</html>
