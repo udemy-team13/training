@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="chat.css">
+  <title>Chat room</title>
+</head>
+
+<body>
+  <h2>Chat room</h2>
+  <div class="chatting"></div>
+  <form onsubmit="chat(event)">
+    <input placeholder="User name">
+    <input placeholder="Write a message!">
+    <button type="submit">전송</button>
+  </form>
+  <script>
+    function chat(event) {
+      event.preventDefault()
+
+      let getUser = document.querySelectorAll('input')[0].value
+      let getMessage = document.querySelectorAll('input')[1].value
+
+      let chat = document.createElement('div')
+      chat.classList.add('chatting')
+      chat.innerHTML = `<span style='font-weight: bold'>${getUser}: </span> <span class=message>${getMessage}</span>`
+
+      document.querySelector('.chatting').append(chat)
+
+      event.target.children[0].value = '';
+      event.target.children[1].value = '';
+      event.target.children[0].focus()
+    }
+  </script>
+</body>
+
+</html>
