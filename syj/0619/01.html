@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="greeting">hello</h1>
+    <p>자바스크립트 안녕? 현재 접속자는..</p>
+    <script>
+        let name = "신유정 ";
+        let age = 26;
+        let user = {name:"신유정", age:26};
+        let num = {a:20, b:10, c:2};
+
+        document.write(user.name);
+        document.write(user.age);
+
+        console.log(user.name);
+        console.log(user.age);
+
+        document.getElementById('greeting').innerText = "hello javascript!"
+        document.write("<br/>a ===", `${num.a}<br/>`);
+        document.write("num.a/num.b ===", `${num.a/num.b}`);
+        
+
+        const name2 = '홍길동';
+        var count=0;
+/*        var time = setInterval(()=>{
+            document.write("Hi!<br/>");
+            count++;
+            if (count>100){clearInterval(time);}
+        },100); */
+
+        var userName="noName"
+//        var userName = prompt("이름 입력하세요");
+        document.write("<br/>"+userName);
+        document.write("<br/>x > y : ", num.a > num.b, "<br/>");
+        document.write(`x == z : ${num.a == num.b} <br/>`);
+        document.write(`false || false : ${false || false} <br/>`);
+
+        function check(a,b){
+            if(a>3 && a<5){
+            return(a+b);}
+            else{
+            return(a*b);}
+        }
+        function check2(a,b){
+            if(a==4 || b==10){
+            return(a*b);}
+        }   
+        function check3(a,b){
+            if(a==4 && b==20){
+            return(a*b);}
+            else{
+                return(a%b);
+            }}
+        
+        document.write(check(4,20),'<br/>');
+        document.write(check2(4,20),'<br/>');
+        document.write(check3(4,20),'<br/>');
+    </script>
+    <button type="button" oclick="test(event)">클릭 !</button>
+    <p>document.write를 지양해야하는 이유?</p>
+    <label for="userText">콘솔 출력문 :</label> <input type="text" id="userText"/>
+    <script>
+        function getUserText(){
+            var inp = document.getElementById('userText');
+            console.log(inp.value);
+        }
+    </script>
+    <button onclick="getUserText()">콘솔출력</button>
+
+</body>
+</html>

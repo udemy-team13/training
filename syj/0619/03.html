@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list{
+            border : 0.5px solid lightgray;
+            padding:5px;
+            width:50%;
+            margin : 0px 5px 5px 5px;
+        }
+        button{
+            background-color: #0969da;
+            color: white;
+            border : none;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        .banner{
+            padding:50px;
+            text-align: center;
+            background-color: #0969da;
+            color:white;
+            font-weight: bold;
+            font-size: 30px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">온라인 상점</div>
+    <div style="display:flex; justify-content:center;">
+        <div class="list">
+            <h3 class="prod">사과</h3>
+            <div class="price">1000원</div>
+            <button onclick="addByNode(event)">장바구니에 추가</button>
+        </div>
+        <div class="list">
+            <h3 class="prod">바나나</h3>
+            <div class="price">1500원</div>
+            <button onclick="addByNode(event)">장바구니에 추가</button>
+        </div>
+    </div>
+    <div>
+        <h3>장바구니</h3>
+        <p class="shoppingCart"></p>
+    </div>
+    <script>
+        let input = document.getElementsByClassName('prod');
+        let inputP = document.getElementsByClassName('price');
+        let cart = document.getElementsByClassName('shoppingCart')[0];
+
+        function add(k){
+            switch(k){
+                case 0 :
+                cart.innerText = cart.innerText + `${input[0].innerText} : ${inputP[0].innerText}`+'\r';
+                break;
+                
+                case 1 :
+                cart.innerText = cart.innerText + `${input[1].innerText} : ${inputP[1].innerText}`+'\r';
+                break;
+            }
+        }
+        
+        function addByNode(event){
+            var out = event.target.parentNode;
+            var input = out.getElementsByClassName('prod');
+            var inputP = out.getElementsByClassName('price');
+            console.log(input, inputP);
+            cart.innerText = cart.innerText + `${input[0].innerText} : ${inputP[0].innerText}`+'\r';
+        }
+    </script>
+</body>
+</html>

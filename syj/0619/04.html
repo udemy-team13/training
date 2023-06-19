@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="board" type="text" />
+    <div class="wrapper"></div>
+    <script>
+        var inp = document.getElementsByClassName('board')[0];
+        var wrap = document.getElementsByClassName('wrapper')[0];
+        var count=0;
+        
+        function removing(event){
+            var targ = event.target.parentNode;
+            wrap.removeChild(targ);
+        }
+
+        inp.addEventListener('keypress',(e)=>{
+            console.log(e.key);
+
+            if (e.key=="Enter"){
+                var divs = document.createElement('div');
+                count++;
+                divs.innerHTML += `<h3>${count}번째 게시글</h3> <p>${inp.value}</p><button onclick='removing(event)'>삭제</button>`
+                wrap.appendChild(divs);
+            }
+        })
+
+    </script>
+</body>
+</html>
