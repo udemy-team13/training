@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const strings = ['Hello', ' ', 'World', '!'];
+        function concates(list){
+            var result = list.join('');
+            console.log(result);
+        }
+        concates(strings);
+
+        let score = 100;
+        let money = 0;
+
+        if(score > 90){
+            document.write('절라 잘했습니다. <br/>');
+            money += 10000;
+        }
+        else if(score >80){
+            document.write('잘했습니다. <br/>');
+            money += 5000;
+        }
+        else if(score >70){
+            document.write('수고하셨습니다. <br/>');
+            money += 1000;
+        }
+        else{
+            money = 0;
+        }
+        document.write(money);
+        let day = new Date();
+
+        var a = [1,2,3,4,5,6,7,8,9]
+        a.forEach((targ)=>{
+            for (let num = 1; num<10; num++){
+                document.write(`${targ} + x + ${num} = ${targ*num}`);
+                }        
+        })
+        const double = a.map((targ)=>{
+            return targ**2;
+        })
+        document.write(double);
+
+        function person(first, last, age){
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+        }
+
+        
+
+
+
+    </script>
+</body>
+</html>
