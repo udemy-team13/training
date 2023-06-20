@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="todo.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2 class="weather">날씨</h2>
+      <div class="content">
+        <h1 class="clock">TIME</h1>
+        <div class="greeting">
+          <form onsubmit="handleName(event)">
+            <input type="text" placeholder="이름을 입력하세요." /> <br />
+          </form>
+        </div>
+        <form onsubmit="handleTodo(event)">
+          <input type="text" placeholder="할 일을 입력하세요." /> <br />
+        </form>
+        <ul class="todo-wrapper"></ul>
+      </div>
+    </div>
+    <script src="background.js"></script>
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <script>
+      (function location() {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          console.log("위도 : " + position.coords.latitude);
+          console.log("경도 : " + position.coords.longitude);
+        });
+      })();
+    </script>
+  </body>
+</html>

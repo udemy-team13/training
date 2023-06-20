@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .text {
+      body {
+        margin: 0;
+      }
+      header {
+        text-align: center;
+        background-color: darkgreen;
+        color: white;
         margin-bottom: 2rem;
       }
-      .wrapper {
+
+      .text {
+        margin-bottom: 2rem;
       }
 
       .inner {
@@ -23,16 +31,19 @@
     </style>
   </head>
   <body>
+    <header>
+      <h1 style="margin: 0; padding: 1rem 0">실시간 채팅</h1>
+    </header>
     <div class="wrapper">
       <div class="text">
         <form onsubmit="handleSubmit(event)">
-          <input type="text" placeholder="제목" />
-          <input type="text" placeholder="내용" />
-          <button class="btn" type="submit">글발행</button>
+          <input type="text" placeholder="사용자명" required />
+          <input type="text" placeholder="메시지를 입력하세요" required />
+          <button class="btn" type="submit">전송</button>
         </form>
       </div>
       <div class="inner">
-        <h2>첫번째 글~</h2>
+        <h2>User1 :</h2>
         <p>안녕하세요</p>
       </div>
     </div>
@@ -49,8 +60,8 @@
         const post = document.createElement("div");
         post.classList.add("inner");
         post.innerHTML = `
-        <h2>${event.target.children[0].value}</h2>
-          <p>${event.target.children[1].value}</p>
+        <h2>User : ${event.target.children[0].value}</h2>
+          <p>메시지 : ${event.target.children[1].value}</p>
           `;
         document.querySelector(".wrapper").append(post);
 
