@@ -32,6 +32,8 @@ setInterval(() => {
 }, 100);
 
 function greeting(event) {
+  event.preventDefault();
+
   let name = document.querySelector(".input_name").value;
   let greeting = document.createElement("div");
   greeting.innerHTML = `Hello, ${name} !`;
