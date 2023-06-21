@@ -1,46 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>실습</title>
-  <link rel="stylesheet" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="./ui.css" />
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script src="https://kit.fontawesome.com/6eae2ae2f2.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="./ui.css" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6eae2ae2f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
 
-</head>
-<body>
-  <div id="root"></div>
-
-  <script type="text/babel">
-    function ProfileTopSection() {
-      const imgSrc = './images/img/profile.jpg';
-      return (
-        <div className="profile-top-section">
-          <ProfileImgGrp imgSrc={imgSrc} />
-          <div className="profile-sns-grp">
-            <a href="https://github.com/gonasooc" className="profile-sns-link" target="_blank"><i
-                className="fa-brands fa-github"></i></a>
-            <a href="https://blog.naver.com/gonasooc" className="profile-sns-link" target="_blank"><i
-                className="fa-solid fa-music"></i></a>
-            <a href="https://www.instagram.com/gonasooc" className="profile-sns-link" target="_blank"><i
-                className="fa-brands fa-instagram"></i></a>
+    <script type="text/babel">
+      function ProfileTopSection() {
+        const imgSrc = "./images/img/profile.jpg";
+        return (
+          <div className="profile-top-section">
+            <ProfileImgGrp imgSrc={imgSrc} />
+            <div className="profile-sns-grp">
+              <a
+                href="https://github.com/gonasooc"
+                className="profile-sns-link"
+                target="_blank"
+              >
+                <i className="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://blog.naver.com/gonasooc"
+                className="profile-sns-link"
+                target="_blank"
+              >
+                <i className="fa-solid fa-music"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/gonasooc"
+                className="profile-sns-link"
+                target="_blank"
+              >
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+            </div>
           </div>
-        </div>
-      )
-    }
+        );
+      }
 
-    function ProfileImgGrp(props) {
-      return (
-        <div className="profile-img-grp">
-          <img src={props.imgSrc} />
-        </div>
-      )
-    }
+      function ProfileImgGrp(props) {
+        return (
+          <div className="profile-img-grp">
+            <img src={props.imgSrc} />
+          </div>
+        );
+      }
 
     function ProfileDetailSection() {
       const profileDetailArr = [
@@ -90,73 +117,123 @@
               })
             }
 
-            <li className="profile-detail-list">🙋‍♂ ISFJ</li>
-          </ul>
-        </div>
-      )
-    }
+              <li className="profile-detail-list">🙋‍♂ ISFJ</li>
+            </ul>
+          </div>
+        );
+      }
 
-    function ProfileDetailList(props) {
-      return (
-        <li className="profile-detail-list">{props.emoji} {props.detailTxt}</li>
-      )
-    }
+      function ProfileDetailList(props) {
+        return (
+          <li className="profile-detail-list">
+            {props.emoji} {props.detailTxt}
+          </li>
+        );
+      }
 
-    function ProfileImgSection() {
-      return (
-        <div className="profile-img-section">
-          <ul className="profile-img-list-grp">
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_01.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_02.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_03.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_04.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_05.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_06.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_07.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_08.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_09.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_10.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_11.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_12.jpg" alt="profile detail image" className="img" />
-            </li>
-          </ul>
-        </div>
-      )
-    }
+      function ProfileImgSection() {
+        return (
+          <div className="profile-img-section">
+            <ul className="profile-img-list-grp">
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_01.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_02.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_03.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_04.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_05.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_06.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_07.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_08.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_09.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_10.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_11.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_12.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+            </ul>
+          </div>
+        );
+      }
 
-    function App() {
-      return (
-        <div>
-          <ProfileTopSection />
-          <ProfileDetailSection />
-          <ProfileImgSection />
-        </div>
-      )
-    }
-    ReactDOM.render(<App />, root)
-  </script>
-</body>
+      function App() {
+        return (
+          <div>
+            <ProfileTopSection />
+            <ProfileDetailSection />
+            <ProfileImgSection />
+          </div>
+        );
+      }
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
 </html>

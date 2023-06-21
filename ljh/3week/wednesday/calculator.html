@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .wrapper {
+        width: 200px;
+      }
+
+      .num-pad {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .num-pad > button {
+        width: 3rem;
+        height: 1.5rem;
+      }
+    </style>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const root = document.getElementById("root");
+
+      function Calculator() {
+        const [pad, setPad] = React.useState([]);
+        const [value, setValue] = React.useState(0);
+        const handlePad = (n) => {
+          if (pad.length !== 0 && isNaN(Number(pad[pad.length - 1]))) {
+            alert("숫자를 입력하세요");
+          }
+          if (pad.length >= 0) {
+            const copyPad = [...pad, n];
+            setPad(copyPad);
+          }
+        };
+
+        const handleCalculator = () => {
+          const result = eval(pad.join(""));
+          setValue(result);
+
+          setPad([]);
+        };
+
+        return (
+          <div className="wrapper">
+            <h1>계산기</h1>
+            <div>
+              <input
+                value={pad.join("")}
+                type="text"
+                onChange={(e) => {
+                  e.target.value;
+                }}
+              />{" "}
+              <span>값 : {value}</span>
+            </div>
+            <div className="num-pad">
+              <button onClick={() => handlePad("1")}>1</button>
+              <button onClick={() => handlePad("2")}>2</button>
+              <button onClick={() => handlePad("3")}>3</button>
+              <button onClick={() => handlePad("4")}>4</button>
+              <button onClick={() => handlePad("5")}>5</button>
+              <button onClick={() => handlePad("6")}>6</button>
+              <button onClick={() => handlePad("7")}>7</button>
+              <button onClick={() => handlePad("8")}>8</button>
+              <button onClick={() => handlePad("9")}>9</button>
+              <button onClick={() => handlePad("+")}>+</button>
+              <button onClick={() => handlePad("-")}>-</button>
+              <button onClick={() => handlePad("/")}>%</button>
+              <button onClick={() => handleCalculator()}>계산</button>
+            </div>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<Calculator />, root);
+    </script>
+  </body>
+</html>

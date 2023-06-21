@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const root = document.getElementById("root");
+
+      function Counter() {
+        const [value, setValue] = React.useState(5);
+        const handleClick = () => setValue((prev) => prev + 100000);
+        return (
+          <div>
+            <h1 style={{ color: "blue" }}>Total Click : {value}</h1>
+            <button onClick={handleClick}>Click Me</button>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<Counter />, root);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      img {
+        width: 300px;
+        height: 300px;
+        cursor: pointer;
+      }
+    </style>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const root = document.getElementById("root");
+
+      function RandomImg() {
+        const [img, setImg] = React.useState(1);
+        const handleImg = () => {
+          const num = Math.ceil(Math.random() * 5);
+          setImg(num);
+        };
+        return (
+          <div className="wrapper">
+            <img
+              src={`../../safehomes/image/img_reserv0${img}.png`}
+              onClick={handleImg}
+            />
+          </div>
+        );
+      }
+      ReactDOM.render(<RandomImg />, root);
+    </script>
+  </body>
+</html>

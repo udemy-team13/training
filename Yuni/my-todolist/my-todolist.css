@@ -4,6 +4,8 @@ body {
   align-items: center;
   justify-content: center;
   width: full;
+  background-size: 2200px;
+  background-repeat: repeat-x;
   height: 100vh;
   z-index: -1;
 }
