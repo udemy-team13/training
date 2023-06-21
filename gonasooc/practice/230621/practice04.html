@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 랜덤 변환</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    function App() {
+      const bgImg = document.querySelector('#bgImg');
+      const imgArr = [
+        'https://images.unsplash.com/photo-1686613616585-47f4f74c6ca1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80', 'https://images.unsplash.com/photo-1678200736463-05e3bedd1317?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', 'https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80', 'https://images.unsplash.com/photo-1686129839916-e3b91637a7ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+      ];
+
+
+      const genRandom = () => { // 랜덤 숫자 생성
+        const number = Math.floor(Math.random() * imgArr.length);
+        return number;
+      }
+
+      const [src, setSrc] = React.useState(imgArr[genRandom()]);
+
+      return (
+        <div>
+          <img src={src} alt="image" id="bgImg"
+          onClick={(e) => {
+            setSrc(imgArr[genRandom()]);
+          }}
+          />
+        </div>
+      )
+    }
+    ReactDOM.render(<App />, root)
+  </script>
+</body>
+</html>

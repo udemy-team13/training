@@ -86,12 +86,7 @@
           <ul className="profile-detail-grp">
             {
               profileDetailArr.map(function(x, i) {
-                return (
-                  <>
-                    <ProfileDetailList emoji={x} detailTxt={i} key={i} />
-                  </>
-                  // console.log(x);
-                )
+                return <ProfileDetailList emoji={x.emoji} detailTxt={x.detailTxt} key={i} />
               })
             }
 
