@@ -6,7 +6,6 @@ function background() {
     "./assets/4.jpg",
     "./assets/5.jpg",
     "./assets/6.jpg",
-    "./assets/7.jpg",
   ];
 
   let getImage = Math.floor(Math.random() * images.length);
