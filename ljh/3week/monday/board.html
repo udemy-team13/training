@@ -39,6 +39,12 @@
 
     <script>
       function handleSubmit(event) {
+        if (
+          event.target.children[0].value === "" ||
+          event.target.children[1].value === ""
+        )
+          return;
+
         event.preventDefault();
         const post = document.createElement("div");
         post.classList.add("inner");

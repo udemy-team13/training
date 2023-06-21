@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper > li {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        border: 1px solid gray;
+        padding: 1rem 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .wrapper > li > button {
+        border: none;
+        background-color: red;
+        color: white;
+        width: 4rem;
+        height: 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="할 일을 입력하세요" required />
+      <button class="submit-btn" type="submit">추가</button>
+    </form>
+    <ul class="wrapper">
+      <li>
+        <span>asdddd</span>
+        <button class="delete-btn" onclick="handleDelete(event)">삭제</button>
+      </li>
+    </ul>
+    <script>
+      function handleSubmit(event) {
+        if (event.target.children[0].value === "") return;
+
+        event.preventDefault();
+        const todo = document.createElement("li");
+        todo.innerHTML = `
+        <span>${event.target.children[0].value}</span>
+          <button class="delete-btn" onclick="handleDelete(event)">삭제</button>
+          `;
+        document.querySelector(".wrapper").append(todo);
+
+        event.target.children[0].value = "";
+      }
+
+      function handleDelete(event) {
+        const element = event.target.parentNode;
+        element.remove();
+      }
+    </script>
+  </body>
+</html>

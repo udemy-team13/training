@@ -1,0 +1,42 @@
+input {
+  width: 280px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+input::placeholder {
+  padding-left: 10px;
+}
+
+.submitButton {
+  width: 50px;
+  height: 30px;
+  margin-left: 10px;
+  background-color: #fffaf0;
+  border: 1px solid orangered;
+  border-radius: 3px;
+}
+
+.post {
+  display: inline-block;
+  width: 800px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 4px;
+  padding-left: 10px;
+  line-height: 30px;
+}
+
+.deleteButton {
+  float: right;
+  width: 60px;
+  height: 24px;
+  margin-right: 10px;
+  margin-top: 3px;
+  color: #fffaf0;
+  background-color: orangered;
+  border: 1px solid orangered;
+  border-radius: 4px;
+}

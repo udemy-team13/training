@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo-list</title>
+  <link rel="stylesheet" type="text/css" href="todo-list.css">
+
+</head>
+
+<body>
+  <form onsubmit="todo(event)">
+    <input placeholder="Add your schedule">
+    <button type="submit" class="submitButton">Add</button>
+  </form>
+  <div class="list"></div>
+
+</body>
+<script>
+  function todo(event) {
+    event.preventDefault();
+
+    let todo = document.querySelectorAll('input')[0].value;
+    let list = document.createElement('div')
+    list.classList.add('post')
+    list.innerHTML = `<div>${todo}<button onclick='deleteTodo(event)' class='deleteButton'>Delete</button></div>`
+
+    document.querySelector('.list').append(list)
+    event.target.children[0].value = "";
+  }
+
+  function deleteTodo(event) {
+    let todoItem = event.currentTarget.parentNode.parentNode
+    todoItem.remove()
+  }
+</script>
+
+</html>
