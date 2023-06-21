@@ -44,7 +44,8 @@ body {
   padding: 10x;
 }
 
-/* .input_todo {
+.input_todo {
+  display: none;
   width: 240px;
   height: 24px;
   border-left-width: 0;
@@ -58,16 +59,37 @@ body {
   color: white;
   font-size: 18px;
   margin-bottom: 20px;
-} */
+}
+
+.input_todo::placeholder {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 10x;
+}
 
 .greeting {
   text-align: center;
   color: white;
 }
 
-.plan {
-  font-weight: bold;
-  font-size: 18px;
+.todoWrapper {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.deleteButton {
+  border: none;
+  background: none;
 }
 
 @keyframes fadeIn {

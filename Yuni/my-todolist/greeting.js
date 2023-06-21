@@ -10,7 +10,5 @@ function greeting(event) {
   greeting.innerHTML = `Hello, ${name}!`;
   document.querySelector(".greeting").append(greeting);
 
-  let plan = document.createElement("div");
-  plan.innerHTML = `what is your plan on today?`;
-  document.querySelector(".plan").append(plan);
+  document.querySelector(".input_todo").style.display = "block";
 }
