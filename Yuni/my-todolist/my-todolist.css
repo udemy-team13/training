@@ -6,13 +6,19 @@ body {
   width: full;
   height: 100vh;
   z-index: -1;
-  animation: fadeIn 1s linear;
 }
 
 .watch {
   display: flex;
   color: white;
+  height: 72px;
   font-size: 72px;
+}
+
+#weather {
+  display: flex;
+  color: white;
+  font-size: 24px;
 }
 
 .input_name {
@@ -35,12 +41,35 @@ body {
   color: white;
   text-align: center;
   font-size: 18px;
+  padding: 10x;
 }
+
+/* .input_todo {
+  width: 240px;
+  height: 24px;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 1;
+  border-bottom: solid white;
+  background: none;
+  outline: none;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+} */
 
 .greeting {
   text-align: center;
   color: white;
 }
+
+.plan {
+  font-weight: bold;
+  font-size: 18px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

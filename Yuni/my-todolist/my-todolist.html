@@ -12,18 +12,30 @@
 
 
 <body>
+  <div id="weather"></div>
   <div>
     <h1 class="watch">00:00</h1>
   </div>
-  <div>
-    <div class="greeting">
-      <form onsubmit="greeting(event)">
-        <input placeholder="what's your name?" class="input_name">
-      </form>
-    </div>
+
+  <div class="greeting">
+    <form onsubmit="greeting(event)">
+      <input placeholder="what's your name?" class="input_name">
+    </form>
   </div>
-  <script src="my-todolist.js">
-  </script>
+  <div>
+
+    <div class="plan"></div>
+    <form onsubmit="todo(event)">
+      <!-- <input type="text" class="input_todo"> -->
+    </form>
+    <ul class="todoWrapper"></ul>
+  </div>
+  </div>
+  <!-- <script src="weather.js"></script> -->
+  <script src="greeting.js"></script>
+  <script src="watch.js"></script>
+  <script src="background.js"></script>
+  <script src="todo.js"></script>
 </body>
 
 </html>
