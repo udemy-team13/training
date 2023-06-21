@@ -1,167 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>실습</title>
-  <link rel="stylesheet" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="./ui.css" />
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script src="https://kit.fontawesome.com/6eae2ae2f2.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="./ui.css" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6eae2ae2f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
 
-</head>
-<body>
-  <div id="root"></div>
-
-  <script type="text/babel">
-    function ProfileTopSection() {
-      const imgSrc = './images/img/profile.jpg';
-      return (
-        <div className="profile-top-section">
-          <ProfileImgGrp imgSrc={imgSrc} />
-          <div className="profile-sns-grp">
-            <a href="https://github.com/gonasooc" className="profile-sns-link" target="_blank"><i
-                className="fa-brands fa-github"></i></a>
-            <a href="https://blog.naver.com/gonasooc" className="profile-sns-link" target="_blank"><i
-                className="fa-solid fa-music"></i></a>
-            <a href="https://www.instagram.com/gonasooc" className="profile-sns-link" target="_blank"><i
-                className="fa-brands fa-instagram"></i></a>
+    <script type="text/babel">
+      function ProfileTopSection() {
+        const imgSrc = "./images/img/profile.jpg";
+        return (
+          <div className="profile-top-section">
+            <ProfileImgGrp imgSrc={imgSrc} />
+            <div className="profile-sns-grp">
+              <a
+                href="https://github.com/gonasooc"
+                className="profile-sns-link"
+                target="_blank"
+              >
+                <i className="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://blog.naver.com/gonasooc"
+                className="profile-sns-link"
+                target="_blank"
+              >
+                <i className="fa-solid fa-music"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/gonasooc"
+                className="profile-sns-link"
+                target="_blank"
+              >
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+            </div>
           </div>
-        </div>
-      )
-    }
+        );
+      }
 
-    function ProfileImgGrp(props) {
-      return (
-        <div className="profile-img-grp">
-          <img src={props.imgSrc} />
-        </div>
-      )
-    }
+      function ProfileImgGrp(props) {
+        return (
+          <div className="profile-img-grp">
+            <img src={props.imgSrc} />
+          </div>
+        );
+      }
 
-    function ProfileDetailSection() {
-      const profileDetailArr = [
-        {
-          emoji: '🙋‍♂',
-          detailTxt: 'ISFJ'
-        },
-        {
-          emoji: '🌳',
-          detailTxt: '남양주시 거주하는 비전공자'
-        },
-        {
-          emoji: '💽',
-          detailTxt: '음반MD 하다가 퍼블리셔로 직무 전환했어요.'
-        },
-        {
-          emoji: '🎧',
-          detailTxt: '음악 덕질 좋아하고 그 중 흑인음악을 가장 좋아합니다.'
-        },
-        {
-          emoji: '🎮︎',
-          detailTxt: '망겜을 하고 있지만 게임을 좋아합니다.'
-        },
-        {
-          emoji: '⚽',
-          detailTxt: '축구와 아스날을 사랑합니다.'
-        },
-        {
-          emoji: '🍺',
-          detailTxt: '좋은 음식, 좋은 술, 특히 맥주!'
-        },
-        {
-          emoji: '⌨️',
-          detailTxt: 'HTML, CSS3, Sass, Tailwind, Bootstrap, Git'
-        },
-        {
-          emoji: '📖',
-          detailTxt: 'JavaScript, React'
-        },
-      ]
-      return (
-        <div className="profile-detail-section">
-          <ul className="profile-detail-grp">
-            {
-              profileDetailArr.map(function(x, i) {
+      function ProfileDetailSection() {
+        const profileDetailArr = [
+          {
+            emoji: "🙋‍♂",
+            detailTxt: "ISFJ",
+          },
+          {
+            emoji: "🌳",
+            detailTxt: "남양주시 거주하는 비전공자",
+          },
+          {
+            emoji: "💽",
+            detailTxt: "음반MD 하다가 퍼블리셔로 직무 전환했어요.",
+          },
+          {
+            emoji: "🎧",
+            detailTxt: "음악 덕질 좋아하고 그 중 흑인음악을 가장 좋아합니다.",
+          },
+          {
+            emoji: "🎮︎",
+            detailTxt: "망겜을 하고 있지만 게임을 좋아합니다.",
+          },
+          {
+            emoji: "⚽",
+            detailTxt: "축구와 아스날을 사랑합니다.",
+          },
+          {
+            emoji: "🍺",
+            detailTxt: "좋은 음식, 좋은 술, 특히 맥주!",
+          },
+          {
+            emoji: "⌨️",
+            detailTxt: "HTML, CSS3, Sass, Tailwind, Bootstrap, Git",
+          },
+          {
+            emoji: "📖",
+            detailTxt: "JavaScript, React",
+          },
+        ];
+        return (
+          <div className="profile-detail-section">
+            <ul className="profile-detail-grp">
+              {profileDetailArr.map(function (x, i) {
                 return (
                   <>
                     <ProfileDetailList emoji={x} detailTxt={i} key={i} />
                   </>
                   // console.log(x);
-                )
-              })
-            }
+                );
+              })}
 
-            <li className="profile-detail-list">🙋‍♂ ISFJ</li>
-          </ul>
-        </div>
-      )
-    }
+              <li className="profile-detail-list">🙋‍♂ ISFJ</li>
+            </ul>
+          </div>
+        );
+      }
 
-    function ProfileDetailList(props) {
-      return (
-        <li className="profile-detail-list">{props.emoji} {props.detailTxt}</li>
-      )
-    }
+      function ProfileDetailList(props) {
+        return (
+          <li className="profile-detail-list">
+            {props.emoji} {props.detailTxt}
+          </li>
+        );
+      }
 
-    function ProfileImgSection() {
-      return (
-        <div className="profile-img-section">
-          <ul className="profile-img-list-grp">
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_01.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_02.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_03.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_04.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_05.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_06.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_07.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_08.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_09.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_10.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_11.jpg" alt="profile detail image" className="img" />
-            </li>
-            <li className="profile-img-list">
-              <img src="./images/img/img_detail_12.jpg" alt="profile detail image" className="img" />
-            </li>
-          </ul>
-        </div>
-      )
-    }
+      function ProfileImgSection() {
+        return (
+          <div className="profile-img-section">
+            <ul className="profile-img-list-grp">
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_01.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_02.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_03.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_04.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_05.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_06.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_07.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_08.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_09.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_10.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_11.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+              <li className="profile-img-list">
+                <img
+                  src="./images/img/img_detail_12.jpg"
+                  alt="profile detail image"
+                  className="img"
+                />
+              </li>
+            </ul>
+          </div>
+        );
+      }
 
-    function App() {
-      return (
-        <div>
-          <ProfileTopSection />
-          <ProfileDetailSection />
-          <ProfileImgSection />
-        </div>
-      )
-    }
-    ReactDOM.render(<App />, root)
-  </script>
-</body>
+      function App() {
+        return (
+          <div>
+            <ProfileTopSection />
+            <ProfileDetailSection />
+            <ProfileImgSection />
+          </div>
+        );
+      }
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
 </html>

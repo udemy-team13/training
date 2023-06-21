@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const root = document.getElementById("root");
+
+      function Login() {
+        const [email, setEmail] = React.useState("");
+        const [password, setPassword] = React.useState("");
+
+        const handleSubmit = (e) => {
+          e.preventDefault();
+          console.log("Email :", email, "Password :", password);
+          setEmail("");
+          setPassword("");
+        };
+
+        return (
+          <div className="wrapper">
+            <form onSubmit={handleSubmit}>
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                placeholder="이메일"
+              />
+              <br />
+              <br />
+              <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                placeholder="비밀번호"
+              />
+              <button type="submit">Login</button>
+            </form>
+          </div>
+        );
+      }
+      ReactDOM.render(<Login />, root);
+    </script>
+  </body>
+</html>
