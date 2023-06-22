@@ -1,5 +1,5 @@
 const weather = document.querySelector('#weather');
-const API_KEY = 'fa99de3c1d60ce05161eb0487c9fd438';
+const API_KEY = '';
 
 
 //.lat, long, api key로 데이터를 요청한다
