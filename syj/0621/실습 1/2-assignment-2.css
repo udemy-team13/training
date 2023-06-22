@@ -1,0 +1,125 @@
+
+    body{
+        font-family: 'Noto Sans KR', sans-serif;
+
+    }
+    .wrapper{
+        margin:0px;
+        padding:0px;
+    }
+
+    /* .font */
+    .bookmark{
+        color:#326cf9;
+        font-weight: bolder;
+    }
+    .section{}
+    .title{}
+    .desc{}
+    .toggle{}
+    .row a{
+        color:black;
+    }
+
+    .row a:hover{
+        background-color:#fbffd0;
+        font-weight: 500;
+    }
+
+    /* .area */
+    .row{
+        max-width: 960px;
+        margin:auto;
+        padding:0px 15px 0px 15px;
+    }
+
+    .block{
+        display:flex;
+        padding:16px 0px 16px 0px;
+        border-top : 0.5px dotted lightgray;
+    }
+    .block_sec{
+        width:20%;
+        padding:0px 15px 0px 15px;
+    }
+    .block_cont{
+        width:80%;
+        padding:0px 15px 0px 15px;
+    }
+
+    .tag{
+        background-color: #f4f6f8;
+        border-radius: 1rem;
+        color:#326cf9;
+        font-size:0.8rem;
+        font-weight: 400;
+        padding:0px 5px 0px 5px;
+    }
+
+    table span{
+        border-radius: 0.5rem;
+        color: lightgray;
+        font-size:0.8rem;
+        font-weight: 300;
+        padding:0px 0.5rem 0px 0.5rem;
+    }
+
+    .myPages{
+            display:inline-flex;
+        }
+    .myPages h2{
+        margin:0px;
+    }
+    .myPages img{
+        border-radius: 100%;
+        width:30px;
+        height:30px;
+        margin-left:5px;
+    }
+
+    .spec{
+        text-align: right;
+        border-top : 0.5px dotted lightgray;
+    }
+
+    .spec td{
+        border-bottom:0.5px dotted lightgray;
+    }
+
+    .spec .checked{
+        color:#326cf9; font-weight:500;
+    }
+    /* .floating */
+    .tableofContent{
+        width:20%;
+        position:fixed;
+        right:10px;
+        top : 20px;
+    }
+    .tableofContent a{
+        text-decoration: none;
+        font-size: 1rem;
+        color:gray;
+    }
+
+    .tableofContent li{
+        background-color: #f4f6f8;
+        margin-bottom: 2px;
+        list-style: none;     
+        border-collapse:collapse;
+        padding:10px 20px 10px 20px;
+        text-align: center;
+    }
+    li.preview{
+        background-color: white;
+        border: 1px solid #f4f6f8;   
+        margin:0px;
+        padding:10px;
+
+    }
+    .preview img{
+        width:100%;
+        object-fit: cover; 
+    }
+
+      
