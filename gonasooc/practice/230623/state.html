@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.development.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+
+<script type="text/babel">
+  const root = document.getElementById('root');
+
+  function UserProfile({name, age, work}) {
+    return (
+      <div>
+        <h2>{name}</h2>
+        <p>{age}</p>
+        <p>{work}</p>
+      </div>
+    )
+  }
+
+  function App() {
+    return (
+      <>
+        <UserProfile name="최관수" age="10" />
+        <UserProfile name="최관수12" age="112" />
+        <UserProfile name="최관수13" age="123" />
+      </>
+    )
+  }
+
+  ReactDOM.render(<App />, root);
+
+  
+  // function App({name}) {
+  //   return (
+  //     <h1>안녕? {name}님</h1>
+  //   )
+  // }
+  
+
+
+  // function Btn( { text, backgorundColor, fontSize, color }) {
+  //   return (
+  //     <button
+  //       style={{
+  //         backgroundColor: backgorundColor,
+  //         color: color,
+  //         fontSize: fontSize,
+  //         padding: '5px 10px',
+  //         border: 0,
+  //         borderRadius: '10px',
+  //         margin: '3px',
+  //       }}
+  //     >
+  //       {text}
+  //     </button>
+  //   );
+  // }
+
+  // function App() {
+  //   return (
+  //     <>
+  //       <Btn text="헬로" backgorundColor="tomato" fontSize="30px" color="#fff" />
+  //       <Btn text="안녕" backgorundColor="blue" fontSize="40px" color="black" />
+  //     </>
+  //   )
+  // }
+  
+  // function App() {
+  //   const root = document.getElementById('root');
+  //   const [counter, setCounter] = React.useState(0);
+  //   const onClick = () => {
+  //     setCounter((counter) => counter + 1);
+  //   };
+  //   return (
+  //     <>
+  //       <h1>Total Clicks: {counter}</h1>
+  //       <button onClick={onClick}>click me</button>
+  //     </>
+  //   )
+  // }
+  
+</script>
+</html>
