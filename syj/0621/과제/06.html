@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .userInput{
+            height:20px;
+            width:90%;
+        }
+        .add{
+            border:none;
+            padding : 5px;
+            margin-left:3px;
+            width:auto;
+        }
+        .todoList{
+            margin-top:10px;
+        }
+        .todoList button{
+            border: none;
+            background-color: red;
+            color:white;
+            padding:5px;
+            float:right;
+        }
+        .todoList div{
+            height:30px;
+            margin-bottom:5px;
+            border-bottom : 1px dotted gray;
+        }
+        .todoList span{
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p style="height:3rem; font-size:3rem; text-align:center" id="weather"></p>
+    <div style="width:80%; margin:auto;"><input class="userInput" type="text" placeholder="할 일을 입력하세요."/><button class="add" onclick="add()">추가</button></div>
+    <div class="todoList"></div>
+    <script>
+        var list = document.getElementsByClassName('todoList')[0];
+        var todo = document.getElementsByClassName('userInput')[0];
+        function add(){
+            var newDiv = document.createElement('div');
+            newDiv.innerHTML += `<span>${todo.value}</span> <button onclick='removing(event)'>삭제</button>`;
+            list.appendChild(newDiv);
+            todo.value="";    
+        }
+        function removing(event){
+            var div = event.target.parentNode;
+            list.removeChild(div);
+        }
+    </script>
+    <script src="02.js"></script>
+</body>
+</html>
