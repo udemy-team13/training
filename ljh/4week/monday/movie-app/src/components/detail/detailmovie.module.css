@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-size: cover;
+}
+
+.poster {
+  width: 15rem;
+  height: 25rem;
+  border-radius: 5px;
+  margin: 3rem 0;
+  box-shadow: 5px 5px 5px 5px gray;
+}
+
+.title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.summary {
+  font-size: 1.1rem;
+  margin: 0 1rem;
+  margin-bottom: 4rem;
+}

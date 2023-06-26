@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.inner {
+  display: flex;
+  padding: 1rem 0;
+}
+
+.inner > li {
+  margin: 0 3rem;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}

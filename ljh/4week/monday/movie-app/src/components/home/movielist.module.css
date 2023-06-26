@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.select {
+  font-size: 1.25rem;
+}
+
+.listwrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.poster {
+  margin: 2rem;
+  width: 15rem;
+  height: 25rem;
+  opacity: 1;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.poster:hover {
+  width: 17.5rem;
+  opacity: 0.75;
+}
+
+.poster > a > img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  box-shadow: 5px 5px 5px 5px gray;
+}
+
+.poster > a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 900px) {
+  .listwrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
