@@ -2,11 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Detail.module.css";
 import Loading from "./Loading";
+import defaultImg from "../assets/defaultImg.jpg";
 
 function Detail() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
+
+  const handleImgError = (e) => {
+    e.target.src = defaultImg;
+  };
 
   useEffect(() => {
     fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
@@ -27,6 +32,7 @@ function Detail() {
             src={movies.large_cover_image}
             alt="imgDetail"
             className={styles.img}
+            onError={handleImgError}
           />
           <div>
             <div className={styles.title}>{movies.title}</div>

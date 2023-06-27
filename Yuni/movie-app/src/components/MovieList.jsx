@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./MovieList.module.css";
 import Loading from "./Loading";
+import defaultImg from "../assets/defaultImg.jpg";
 
 function MovieList() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
 
+  const handleImgError = (e) => {
+    e.target.src = defaultImg;
+  };
+
   useEffect(() => {
-    fetch(
-      `https://yts.mx/api/v2/list_movies.json?minimum_rating=9.0&sort_by=year`
-    )
+    fetch(`https://yts.mx/api/v2/list_movies.json`)
       .then((response) => response.json())
       .then((json) => {
         setLoading(false);
@@ -34,6 +37,7 @@ function MovieList() {
                     className={styles.imageCard}
                     src={movie.medium_cover_image}
                     alt="img"
+                    onError={handleImgError}
                   />
                 </Link>
               </div>
