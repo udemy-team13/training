@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Detail.module.css";
 import Loading from "./Loading";
-import defaultImg from "../assets/defaultImg.jpg";
+import defaultImg from "../assets/defaultImg.png";
 
 function Detail() {
   const { id } = useParams();

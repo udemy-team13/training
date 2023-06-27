@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./MovieList.module.css";
 import Loading from "./Loading";
-import defaultImg from "../assets/defaultImg.jpg";
+import defaultImg from "../assets/defaultImg.png";
 
 function MovieList() {
   const [loading, setLoading] = useState(true);
