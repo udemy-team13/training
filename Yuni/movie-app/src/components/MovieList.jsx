@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./MovieList.module.css";
+import Loading from "./Loading";
 
 function MovieList() {
   const [loading, setLoading] = useState(true);
@@ -12,27 +13,33 @@ function MovieList() {
     )
       .then((response) => response.json())
       .then((json) => {
-        setMovies(json.data.movies);
         setLoading(false);
+        setMovies(json.data.movies);
       });
   }, []);
   console.log(movies);
 
   return (
     <>
-      <h1 className={styles.title}>Movie Gallery 🍯</h1>
-      <div className={styles.wrapper}>
-        {movies.map((movie) => (
-          <div className={styles.movieItem} key={movie.id}>
-            <Link to={`/detail/${movie.id}`}>
-              <img
-                className={styles.imageCard}
-                src={movie.medium_cover_image}
-                alt="img"
-              />
-            </Link>
+      <div>
+        <h1 className={styles.title}>Movie Gallery 🍯</h1>
+        {loading ? (
+          <Loading />
+        ) : (
+          <div className={styles.wrapper}>
+            {movies.map((movie) => (
+              <div className={styles.movieItem} key={movie.id}>
+                <Link to={`/detail/${movie.id}`}>
+                  <img
+                    className={styles.imageCard}
+                    src={movie.medium_cover_image}
+                    alt="img"
+                  />
+                </Link>
+              </div>
+            ))}
           </div>
-        ))}
+        )}
       </div>
     </>
   );
