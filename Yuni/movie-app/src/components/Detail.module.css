@@ -1,0 +1,48 @@
+body {
+  background-color: #fff8dc;
+  color: #505050;
+}
+
+.wrapper {
+  display: flex;
+  width: 1000px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.img {
+  border-radius: 40px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.rating {
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.info {
+  width: 400px;
+  height: 400px;
+  overflow: scroll;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.info::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff8dc;
+  opacity: 0.8;
+}
+
+.info::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: Coral;
+}
