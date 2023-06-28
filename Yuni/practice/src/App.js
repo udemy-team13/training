@@ -1,14 +1,10 @@
-// import Login from "./components/Login";
-// import Todo from "./components/Todo";
-// import Number from "./components/Number";
-import Image from "./components/Image";
+// import Counter from "./components/Counter";
+import UseCount from "./components/useCounter";
 
 function App() {
   return (
     <>
-      <div>
-        <Image />
-      </div>
+      <UseCount />
     </>
   );
 }
