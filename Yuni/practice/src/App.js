@@ -1,10 +1,9 @@
-// import Counter from "./components/Counter";
-import UseCount from "./components/useCounter";
+import Chat from "./Chat";
 
 function App() {
   return (
     <>
-      <UseCount />
+      <Chat />
     </>
   );
 }
