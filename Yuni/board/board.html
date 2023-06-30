@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="board.css">
+  <title>Board 📝</title>
+
+</head>
+
+<body>
+  <h2>Post</h2>
+  <form onsubmit="addPost(event)">
+    <span>제목: <input type="text" name="title"></span>
+    <span>내용: <input type="text" name="title"></span>
+    <button type="submit">등록하기</button>
+  </form>
+  <div class="post"></div>
+  <script>
+    function addPost(event) {
+      event.preventDefault();
+
+      const getTitle = document.querySelectorAll('input')[0].value
+      const getText = document.querySelectorAll('input')[1].value;
+
+      const addPost = document.createElement('div')
+      addPost.classList.add('inner')
+      addPost.innerHTML = `<h1>${getTitle}</h1> <p>${getText}</p>`
+
+      document.querySelector('.post').append(addPost)
+    }
+
+  </script>
+</body>
+
+</html>
