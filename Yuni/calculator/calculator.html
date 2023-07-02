@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <input type="text" id="input">
+      <div class="calculator">
+
+        <button id="reset" onclick="reset()">RESET</button>
+        <button class="operator" onclick="result()">=</button>
+      </div>
+      <div>
+        <button class="num_button" onclick="btn_click(7)">7</button>
+        <button class="num_button" onclick="btn_click(8)">8</button>
+        <button class='num_button' onclick="btn_click(9)">9</button>
+        <button class="operator" onclick="cal('/')">%</button>
+      </div>
+      <button class="num_button" onclick="btn_click(4)">4</button>
+      <button class="num_button" onclick="btn_click(5)">5</button>
+      <button class="num_button" onclick="btn_click(6)">6</button>
+      <button class="operator" onclick="cal('*')">*</button>
+      <div>
+        <button class="num_button" onclick="btn_click(1)">1</button>
+        <button class="num_button" onclick="btn_click(2)">2</button>
+        <button class="num_button" onclick="btn_click(3)">3</button>
+        <button class="operator" onclick="cal('-')">-</button>
+      </div>
+      <div>
+        <button class="button" onclick="btn_click(0)">0</button>
+        <button class="operator" onclick="cal('+')">+</button>
+      </div>
+    </div>
+  </main>
+  <script src="calculator.js">
+
+
+  </script>
+</body>
+
+</html>
