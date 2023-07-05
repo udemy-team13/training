@@ -69,6 +69,7 @@ function MovieList() {
                           label={genre}
                           size="small"
                           variant="outlined"
+                          color="secondary"
                         />
                       ))}
                     </Stack>

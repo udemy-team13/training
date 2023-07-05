@@ -9,7 +9,7 @@ function Loading() {
         className={styles.hearts}
         height="100"
         width="100"
-        color="Coral"
+        color="blueviolet"
         ariaLabel="hearts-loading"
         wrapperStyle={{}}
         wrapperClass=""
