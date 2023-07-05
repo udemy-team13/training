@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./MovieList.module.css";
 import Loading from "./Loading";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
 import { BiHeart } from "react-icons/bi";
 import defaultImg from "../assets/defaultImg.png";
 
@@ -58,7 +60,20 @@ function MovieList() {
                     />
                   </Link>
                   <div className={styles.title}>{movie.title}</div>
-                  <div className={styles.genres}>{movie.genres}</div>
+
+                  <div className={styles.genres}>
+                    <Stack direction="row" spacing={0.5}>
+                      {movie.genres.map((genre, index) => (
+                        <Chip
+                          key={index}
+                          label={genre}
+                          size="small"
+                          variant="outlined"
+                        />
+                      ))}
+                    </Stack>
+                  </div>
+
                   <button
                     className={styles.like_btn}
                     onClick={() => handleClick(movie.id)}
